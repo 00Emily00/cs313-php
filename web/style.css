@@ -1,0 +1,38 @@
+body {
+   background-color: aliceblue;
+}
+h1 {
+   
+}
+p {
+    font-size: 20px;
+    margin-right: 15px;
+    font-family: monospace;
+    padding: 5px;
+
+}
+img {
+    float: left;
+    width: 30%;
+    height: 45%;
+}
+
+.topnav {
+    background-color: black;
+    overflow: hidden;
+    text-align: right;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    color: aliceblue;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+}
+
+/* Change color of links on hover */
+.topnav a:hover {
+    background-color: aquamarine;
+    color: black;
+}
