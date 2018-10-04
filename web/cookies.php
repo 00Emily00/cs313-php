@@ -13,7 +13,11 @@ session_start();
 if(isset($_SESSION["visit"]))
     $_SESSION["visit"]++;
 
-$visit = $_SESSION["You have visited"]
+else{
+    $_SESSION["visit"] = 1;   
+}
+    
+$visit = $_SESSION["You have visited"];
 ?>
 
 <!DOCTYPE html>
