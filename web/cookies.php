@@ -27,6 +27,6 @@ $visit = $_SESSION["You have visited"];
     </head>
     <body>
     <!--<p>This is a cookies $favorite</p>-->
-        <p>$visit</p>
+        <p><?php echo $_SESSION["visit"] ?></p>
     </body>
 </html>
