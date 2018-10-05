@@ -10,9 +10,9 @@
     <h1>Book Store</h1>
 
     <div class="topnav">
-        <a class="active" href="browse.php">Home</a>
+        <a href="browse.php">Home</a>
         <a class="active" href="cart.php">View Cart</a>
-        <a class="active" href="checkout.php">Checkout</a> 
+        <a href="checkout.php">Checkout</a> 
     </div>
     
 <?php
