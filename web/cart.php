@@ -30,9 +30,9 @@
         unset($_SESSION["book"][$thing]);
     }
 ?>
-    <form action="cart.php" method="post">
     
-    //we are checking to see which books the user selected and displaying it
+    <form action="cart.php" method="post">
+    <!--we are checking to see which books the user selected and displaying it-->
     <?php
     foreach ($_SESSION["book"] as $item) {
         
