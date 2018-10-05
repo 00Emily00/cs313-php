@@ -18,10 +18,10 @@
 <?php
   session_start();
     //saving the books the user selected to a container called item. item
-    foreach ($_POST["book"] as $item) {
-    $_SESSION["book"][$item] = $item;
-        echo "session $item";
-    }
+//    foreach ($_POST["book"] as $item) {
+//    $_SESSION["book"][$item] = $item;
+//        echo "session $item";
+//    }
     
     //if it has a button next to it, store that in something called thing.
     //then when a delete button is clicked next to the book, it will delete that specific book
