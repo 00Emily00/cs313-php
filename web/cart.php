@@ -15,7 +15,7 @@
     <form action="cart.php" method="post">
     
     <?php
-    foreach ($_POST["book"] as $item) {
+    foreach ($_SESSION["book"] as $item) {
         
         echo $item . " ";
         echo "<button type='submit' name='delete'>Delete</button><br>";
