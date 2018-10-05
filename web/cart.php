@@ -4,7 +4,7 @@
 <?php
   session_start();
     //saving the books the user selected. item -variable
-    $_SESSION["book"] = $_POST;
+    $_SESSION["book"] = $_POST["book"];
         echo "$_SESSION['book']";
     
 
