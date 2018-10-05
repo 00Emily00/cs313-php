@@ -10,7 +10,7 @@
     }
 
     if(isset($_POST["delete"]))
-        echo "deleted";
+        echo "$_POST['delete']";
 ?>
     <form action="cart.php" method="post">
     
@@ -18,7 +18,7 @@
     foreach ($_SESSION["book"] as $item) {
         
         echo $item . " ";
-        echo "<button type='submit' name='delete'>Delete</button><br>";
+        echo "<button type='submit' name='delete' value='$item'>Delete</button><br>";
     }
 ?>
     </form>
