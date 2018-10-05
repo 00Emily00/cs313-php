@@ -7,7 +7,7 @@
     if(isset($_POST["delete"]))
         echo "deleted";
 ?>
-    <form action="cart.php" method"post">
+    <form action="cart.php" method="post">
     
     <?php
     foreach ($_POST["book"] as $item) {
