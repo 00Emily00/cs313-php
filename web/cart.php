@@ -9,8 +9,9 @@
         echo "session $item";
     }
 
-    if(isset($_POST["delete"]))
-      //  echo "$_POST['delete']";
+    if(isset($_POST["delete"])) {
+        echo "$_POST['delete']";
+    }
 ?>
     <form action="cart.php" method="post">
     
