@@ -12,7 +12,7 @@
 <h1>Book Store</h1>
 
 <div class="topnav">
-  <a class="browse.php" href="#home">Home</a>
+  <a class="active" href="browse.php">Home</a>
   <a href="cart.php">View Cart</a>
   <a href="checkout.php">Checkout</a>
 </div>
