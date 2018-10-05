@@ -4,7 +4,7 @@
 <?php
     session_start();
     foreach ($_POST["book"] as $item) {
-        echo $item . " ";
+        echo $item.value . " ";
     }
 ?>
 </body>
