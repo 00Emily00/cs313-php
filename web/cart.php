@@ -11,7 +11,7 @@
 
     if(isset($_POST["delete"])) {
         $thing = $_POST["delete"];
-        echo $thing;
+        unset($_SESSION["book"][$thing]);
     }
 ?>
     <form action="cart.php" method="post">
