@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
+	<title>About Us</title>
 
 	<!-- Using Bootstrap for this assignment certainly isn't required, but I got having
 		 fun and couldn't resist. Notice that I include my own stylesheet after the
@@ -23,21 +23,11 @@ require("nav.php");
 ?>
 
 	<div class="jumbotron">
+	<h2>About Us</h2>
 
-		<h2>Login</h2>
+	<p>At Make your own Mountain, we believe that everyone should have their own mountain. Whether you are ready for a full-scale mountain, or just getting started with your first hill in the backyard, we have you covered.</p>
 
-		<ul>
-			<!-- the forceLogin.php page is not implemented yet, but my approach
-			     is to have that page simply set the session variable according to the
-			     type parameter passed on the URL. Notice that this is NOT a good
-			     approach for authentication. We'll discuss later better ways to handle
-			     usernames and passwords.
-			-->
-
-			<li><p><a href="forceLogin.php?type=admin">Login as Administrator</a></p></li>
-			<li><p><a href="forceLogin.php?type=tester">Login as Tester</a></p></li>
-		</ul>
 	</div>
-
+</div>
 </body>
 </html>
