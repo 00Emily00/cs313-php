@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <link rel="stylesheet" type="text/css" href="shoppingcart.css">
+</head>
 <body>
+    <h1>Book Store</h1>
+
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="cart.php">View Cart</a>
+        <a href="checkout.php">Checkout</a> 
+    </div>
+    
 <?php
   session_start();
-    //saving the books the user selected. item -variable
+    //saving the books the user selected to a container called item. item
     foreach ($_POST["book"] as $item) {
     $_SESSION["book"][$item] = $item;
         echo "session $item";
     }
-
+    
+    //if it has a button next to it, store that in something called thing.
+    //then when a delete button is clicked next to the book, it will delete that specific book
     if(isset($_POST["delete"])) {
         $thing = $_POST["delete"];
         unset($_SESSION["book"][$thing]);
@@ -16,10 +29,12 @@
 ?>
     <form action="cart.php" method="post">
     
+    //we are checking to see which books the user selected and displaying it
     <?php
     foreach ($_SESSION["book"] as $item) {
         
         echo $item . " ";
+        //we added a button to each book displayed
         echo "<button type='submit' name='delete' value='".$item."'>Delete</button><br>";
     }
 ?>
