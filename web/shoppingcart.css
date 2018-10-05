@@ -5,3 +5,7 @@ h1 {
 form {
     text-align: center;
 }
+background {
+    background-color: aliceblue;
+    display: inline-block;
+}
