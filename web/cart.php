@@ -20,7 +20,7 @@
     saving the books the user selected to a container called item. item
     foreach ($_POST["book"] as $item) {
     $_SESSION["book"][$item] = $item;
-      //  echo "session $item";
+        echo "session $item";
     }
     
     //if it has a button next to it, store that in something called thing.
