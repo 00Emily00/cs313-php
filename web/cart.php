@@ -4,9 +4,10 @@
 <?php
   session_start();
     //saving the books the user selected. item -variable
-    $_SESSION["book"] = $_POST["book"];
-        echo "$_SESSION['book']";
-    
+    foreach ($_POST["book"] as $item) {
+    $_SESSION["book"][$item] = $item;
+        echo "session $item";
+    }
 
     if(isset($_POST["delete"]))
         echo "deleted";
