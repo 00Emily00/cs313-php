@@ -10,7 +10,8 @@
     }
 
     if(isset($_POST["delete"])) {
-        echo "$_POST['delete']";
+        $thing = $_POST["delete"];
+        echo $thing;
     }
 ?>
     <form action="cart.php" method="post">
