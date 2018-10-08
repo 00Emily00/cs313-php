@@ -44,9 +44,8 @@
 ?>
     
     </form>
-    <div class="cartbutton">
-    <a href="checkout.php"><button>Checkout</button></a>
-    </div>
+    
+    <a href="checkout.php"><button class="cartbutton">Checkout</button></a>
     </div>
 </body>
 </html>
