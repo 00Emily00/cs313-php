@@ -17,17 +17,20 @@
     
     <h1>Please Fill in your information</h1>
 
-<form action="confirmation.php" method="post"> 
+    <form action="confirmation.php" method="post"> 
+    First name:<input type='text' name='first'><br>;
+    Last name:<input type='text' name='last'><br>;
+    Address:<br>
+    <span>Street<input type='text' name='street'></span>;
+    <span>City<input type='text' name='city'></span>;
+    <span>State<input type='text' name='state'></span>;
+    <span>Country<input type='text' name='country'></span>
+    <button type='submit'>Checkout</button>;
+    
+    </form>
 <?php
 session_start();
 
-echo "<p>First name:</p><input type='text' name='first'><br>";
-echo "<p>Last name:</p><input type='text' name='last'><br>";
-echo "Address:<br><span>Street<input type='text' name='street'></span>";
-echo "<span>City<input type='text' name='city'></span>";
-echo "<span>State<input type='text' name='state'></span>";
-echo "<button type='submit'>Checkout</button>";
 ?>
-</form>
 </body>
 </html>

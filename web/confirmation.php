@@ -14,11 +14,25 @@
         <a href="cart.php">View Cart</a>
         <a href="checkout.php">Checkout</a>
     </div>
+    
+ <h1>Thank You for shopping with us</h1>;
+    
+    
 <?php
 session_start();
-    
-echo "<h1>Thank You for shopping with us $first</h1>";
+      
+foreach ($_SESSION["book"] as $item) {  
+         echo $item . " ";
+}
+
+echo "$_POST['first']";
+echo "$_POST['last']";
+echo "$_POST['street']";
+echo "$_POST['city']";
+echo "$_POST['state']";
+echo "$_POST['country']";
 ?>
+    
     
 </body>
 </html>
