@@ -24,13 +24,13 @@ session_start();
 foreach ($_SESSION["book"] as $item) {  
          echo $item . " ";
 }
-
-$first = $_POST['first'];    
-$last = $_POST['last'];
-$street = $_POST['street'];
-$city = $_POST['city'];
-$state = $_POST['state'];
-$country = $_POST['country'];
+//htmlspecialchar stops malicious code in input;
+$first = htmlspecialchar($_POST['first']);    
+$last = htmlspecialchar($_POST['last']);
+$street = htmlspecialchar($_POST['street']);
+$city = htmlspecialchar($_POST['city']);
+$state = htmlspecialchar($_POST['state']);
+$country = htmlspecialchar($_POST['country']);
     
 echo $first;
 echo $last;
