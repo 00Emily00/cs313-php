@@ -31,6 +31,8 @@
     
 <?php
 session_start();
+
+echo "<p>First name:</p><br><input type='text' name='first'><br>";
 ?>
 </body>
 </html>
