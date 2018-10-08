@@ -7,10 +7,10 @@
     <link rel="stylesheet" type="text/css" href="shoppingcart.css">
 </head>
 <body>
-    <h1>Book Store</h1>
+    <h1>Free Book Store</h1>
 
     <div class="topnav">
-        <a class="active" href="#home">Home</a>
+        <a href="#home">Home</a>
         <a href="cart.php">View Cart</a>
         <a href="checkout.php">Checkout</a>
     </div>

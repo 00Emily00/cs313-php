@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="shoppingcart.css">
 </head>
 <body>
-    <h1>Book Store</h1>
+    <h1>Free Book Store</h1>
 
     <div class="topnav">
         <a href="browse.php">Home</a>
@@ -16,7 +16,7 @@
     </div>
     
     <h1>Please Fill in your information</h1>
-    <form action="confirmation" method="post">
+    <form action="confirmation.php" method="post">
         First name:<br>
         <input type="text" name="first"><br>
         Last name:<br>
