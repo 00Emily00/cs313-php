@@ -45,7 +45,7 @@
     
     </form>
     <div class="cartbutton">
-    <a href="checkout.php"><button id="cartbutton">Checkout</button></a>
+    <a href="checkout.php"><button>Checkout</button></a>
     </div>
     </div>
 </body>
