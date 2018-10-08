@@ -36,13 +36,13 @@
     <?php
     foreach ($_SESSION["book"] as $item) {
         
-         echo "<div>$item . ' '</div";
+         echo "<div>$item . ' '</div>";
         //we added a button to each book displayed
         echo "<button type='submit' name='delete' value='".$item."'>Delete</button><br>";
     }
 ?>
         
     </form>
-    <a href="checkout.php"><button>Checkout</button></a>
+    <a href="checkout.php" id="cartbutton"><button>Checkout</button></a>
 </body>
 </html>
