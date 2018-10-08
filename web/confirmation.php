@@ -10,12 +10,13 @@
     <h1>Free Book Store</h1>
 
     <div class="topnav">
-        <a href="#home">Home</a>
+        <a href="browse.php">Home</a>
         <a href="cart.php">View Cart</a>
         <a href="checkout.php">Checkout</a>
     </div>
     
  <h1>Thank You for shopping with us</h1>
+ <h2>Your Order;</h2>
     
     
 <?php
@@ -31,8 +32,8 @@ $last = htmlspecialchars($_POST['last']);
 $street = htmlspecialchars($_POST['street']);
 $city = htmlspecialchars($_POST['city']);
 $state = htmlspecialchars($_POST['state']);
-$country = htmlspecialchars($_POST['country']);
-    
+$zip = htmlspecialchars($_POST['zip']);
+echo "<div class='confirmation'>"$first . " " . $last;
 echo $first;
 echo " ";
 echo $last;
@@ -44,6 +45,7 @@ echo " ";
 echo $state;
 echo " ";
 echo $zip;
+echo "</div>";
 ?>
     
     
