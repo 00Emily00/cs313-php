@@ -16,15 +16,17 @@
     </div>
     
     <h1>Please Fill in your information</h1>
-    <form>
+    <form action="confirmation" method="post">
         First name:<br>
         <input type="text" name="first"><br>
         Last name:<br>
         <input type="text" name="last"><br><br>
         Address:<br>
-        <span><input type="text" name="street">Street</span>
-        <span><input type="text" name="city">City</span>
-        <span><input type="text" name="state">State</span>
+        <span>Street<input type="text" name="street"></span>
+        <span>City<input type="text" name="city"></span>
+        <span>State<input type="text" name="state"></span>
+        
+        <button type="submit">Checkout</button>
     </form>
     
 <?php
