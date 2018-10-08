@@ -16,14 +16,13 @@
     </div>
     
     <h1>Please Fill in your information</h1>
-   
-        
-        <button type="submit">Checkout</button>
-    </form>
+
 <form action="confirmation.php" method="post"> 
 <?php
 session_start();
 
+$fname = "first";
+    
 echo "<p>First name:</p><input type='text' name='first'><br>";
 echo "<p>Last name:</p><input type='text' name='last'><br>";
 echo "Address:<br><span>Street<input type='text' name='street'></span>";

@@ -21,36 +21,31 @@
         <h1>Select the books you would like to add to your cart</h1><br>
     <div class="row">
         <div class="column">
-    <img src="1984.jpg"><input type="checkbox" name="book[]" value="1984">1984<br>
+    <img src="1984.jpg"><br><input type="checkbox" name="book[]" value="1984">1984<br>
         </div>
         <div class="column">
-    <img src="to%20kill%20a%20mockingbird.jpg"><input type="checkbox" name="book[]" value="To Kill a Mockingbird">To Kill a Mockingbird<br>
+    <img src="to%20kill%20a%20mockingbird.jpg"><br><input type="checkbox" name="book[]" value="To Kill a Mockingbird">To Kill a Mockingbird<br>
         </div>
     <div class="column">
-    <img src="underground%20railroad.jpg"><input type="checkbox" name="book[]" value="The Underground Railroad">The Underground Railroad<br>
+    <img src="underground%20railroad.jpg"><br><input type="checkbox" name="book[]" value="The Underground Railroad">The Underground Railroad<br>
         </div>
     <div class="column">
-    <img src="fahrenheit%20451.jpeg"><input type="checkbox" name="book[]" value="Fahrenheit 451">Fahrenheit 451<br>
-        </div>
-<!--
-    <div class="column">
-    <img src="lovely%20bones.jpg"><input type="checkbox" name="book[]" value="The Lovely Bones">The Lovely Bones<br>
-        </div>
--->
-    <div class="column">
-    <img src="joy%20luck%20club.jpg"><input type="checkbox" name="book[]" value="They Joy Luck Club">The Joy Luck Club<br>
+    <img src="fahrenheit%20451.jpeg"><br><input type="checkbox" name="book[]" value="Fahrenheit 451">Fahrenheit 451<br>
         </div>
     <div class="column">
-    <img src="siddhartha.jpg"><input type="checkbox" name="book[]" value="Siddhartha">Siddhartha<br>
+    <img src="joy%20luck%20club.jpg"><br><input type="checkbox" name="book[]" value="They Joy Luck Club">The Joy Luck Club<br>
         </div>
     <div class="column">
-    <img src="little%20prince.jpg"><input type="checkbox" name="book[]" value="The Little Prince">The Little Prince<br>
+    <img src="siddhartha.jpg"><br><input type="checkbox" name="book[]" value="Siddhartha">Siddhartha<br>
         </div>
     <div class="column">
-    <img src="glass%20castle.jpg"><input type="checkbox" name="book[]" value="Glass Castle">Glass Castle<br>
+    <img src="little%20prince.jpg"><br><input type="checkbox" name="book[]" value="The Little Prince">The Little Prince<br>
         </div>
     <div class="column">
-    <img src="hidden%20figures.jpg"><input type="checkbox" name="book[]" value="Hidden Figures">Hidden Figures<br>
+    <img src="glass%20castle.jpg"><br><input type="checkbox" name="book[]" value="Glass Castle">Glass Castle<br>
+        </div>
+    <div class="column">
+    <img src="hidden%20figures.jpg"><br><input type="checkbox" name="book[]" value="Hidden Figures">Hidden Figures<br>
         </div>
     
     </div>
