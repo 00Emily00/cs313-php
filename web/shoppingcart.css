@@ -1,4 +1,4 @@
-h1 {
+h1, h2 {
     text-align: center;
     font-family: fantasy;
 }
@@ -56,4 +56,9 @@ img {
     padding: inherit;
     border: 5px solid gray;
     margin: 0;
+}
+.confirmation {
+    text-align: center;
+    font-size: 2em;
+    font-family: fantasy;
 }
