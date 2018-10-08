@@ -68,7 +68,7 @@ img {
     font-family: fantasy;
     color: darkseagreen;
 }
-button {
+.cartbutton {
     background-color: #4CAF50;
     color: white;
     padding: 15px 32px;
