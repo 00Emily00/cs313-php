@@ -37,9 +37,9 @@
     foreach ($_SESSION["book"] as $item) {
         
          echo $item . " ";
-         echo "<br>";
         //we added a button to each book displayed
         echo "<button type='submit' name='delete' value='".$item."'>Delete</button><br>";
+        echo "<br>";
     }
 ?>
     
