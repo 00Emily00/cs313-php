@@ -23,7 +23,7 @@
 session_start();
       
 foreach ($_SESSION["book"] as $item) {  
-         echo "<div class='confirmation'>$item</div>";
+         echo "<div class='bookconfirmation'>$item</div>";
          echo "<br>";
 }
 //htmlspecialchar stops malicious code in input;
@@ -33,7 +33,10 @@ $street = htmlspecialchars($_POST['street']);
 $city = htmlspecialchars($_POST['city']);
 $state = htmlspecialchars($_POST['state']);
 $zip = htmlspecialchars($_POST['zip']);
+
+echo "This order is for:<br>";
 echo "<div class='confirmation'>$first $last</div><br>";
+echo "This will be shipped to:<br>";
 echo "<div class='confirmation'>$street $city $state $zip </div><br>";
 //echo "<div class='confirmation'>"$street . $city . $state . $zip . "</div><br>"
 //echo "<br>";
