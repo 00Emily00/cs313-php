@@ -25,12 +25,12 @@ foreach ($_SESSION["book"] as $item) {
          echo $item . " ";
 }
 //htmlspecialchar stops malicious code in input;
-$first = htmlspecialchar($_POST['first']);    
-$last = htmlspecialchar($_POST['last']);
-$street = htmlspecialchar($_POST['street']);
-$city = htmlspecialchar($_POST['city']);
-$state = htmlspecialchar($_POST['state']);
-$country = htmlspecialchar($_POST['country']);
+$first = htmlspecialchars($_POST['first']);    
+$last = htmlspecialchars($_POST['last']);
+$street = htmlspecialchars($_POST['street']);
+$city = htmlspecialchars($_POST['city']);
+$state = htmlspecialchars($_POST['state']);
+$country = htmlspecialchars($_POST['country']);
     
 echo $first;
 echo $last;
