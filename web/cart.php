@@ -41,6 +41,7 @@
         echo "<button type='submit' name='delete' value='".$item."'>Delete</button><br>";
     }
 ?>
+        <a href="checkout.php"><button>Checkout</button></a>
     </form>
 </body>
 </html>
