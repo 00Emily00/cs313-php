@@ -15,14 +15,15 @@
         <a href="checkout.php">Checkout</a>
     </div>
     
- <h1>Thank You for shopping with us</h1>;
+ <h1>Thank You for shopping with us</h1>
     
     
 <?php
 session_start();
       
 foreach ($_SESSION["book"] as $item) {  
-         echo $item . " ";
+         echo $item;
+         echo "<br>";
 }
 //htmlspecialchar stops malicious code in input;
 $first = htmlspecialchars($_POST['first']);    
@@ -33,11 +34,16 @@ $state = htmlspecialchars($_POST['state']);
 $country = htmlspecialchars($_POST['country']);
     
 echo $first;
+echo " ";
 echo $last;
+echo "<br>";
 echo $street;
+echo " ";
 echo $city;
+echo " ";
 echo $state;
-echo $country;
+echo " ";
+echo $zip;
 ?>
     
     
