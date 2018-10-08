@@ -39,12 +39,14 @@
          echo $item . " ";
         //we added a button to each book displayed
         echo "<button type='submit' name='delete' value='".$item."'>Delete</button><br>";
-        echo "<br>";
+        echo "<br><br>";
     }
 ?>
     
     </form>
+    <div class="cartbutton">
     <a href="checkout.php"><button id="cartbutton">Checkout</button></a>
+    </div>
     </div>
 </body>
 </html>

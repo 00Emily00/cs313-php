@@ -48,7 +48,7 @@ img {
     clear: both;
     display: table;
 }
-#cartbutton {
+.cartbutton {
     text-align: center;
 }
 .border {
