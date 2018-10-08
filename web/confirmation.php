@@ -19,6 +19,7 @@
 <?php
 session_start();
     
+echo "Thank You for shopping with us "
 ?>
     
 </body>
