@@ -16,7 +16,7 @@
     </div>
     
  <h1>Thank You for shopping with us</h1>
- <h2>Your Order;</h2>
+ <h2>Your Order:</h2>
     
     
 <?php
@@ -33,7 +33,7 @@ $street = htmlspecialchars($_POST['street']);
 $city = htmlspecialchars($_POST['city']);
 $state = htmlspecialchars($_POST['state']);
 $zip = htmlspecialchars($_POST['zip']);
-//echo "<div class='confirmation'>"$first . $last . "</div><br>";
+echo "<div class='confirmation'>$first . $last . </div><br>";
 //echo "<div class='confirmation'>"$street . $city . $state . $zip . "</div><br>"
 //echo "<br>";
 ?>
