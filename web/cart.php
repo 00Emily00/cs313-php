@@ -44,9 +44,8 @@
 ?>
     
     </form>
-    <div class="submitbutton">
-    <a href="checkout.php"><button>Checkout</button></a>
-    </div>
+    <a href="checkout.php"><button class="submitbutton">Checkout</button></a>
+   
     </div>
 </body>
 </html>
