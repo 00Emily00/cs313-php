@@ -19,12 +19,12 @@
 
     <form action="confirmation.php" method="post"> 
     First name:<input type='text' name='first'><br>
-    Last name:<input type='text' name='last'><br>
+    Last name:<input type='text' name='last'><br><br>
     Address:<br>
     <span>Street<input type='text' name='street'></span>
     <span>City<input type='text' name='city'></span>
     <span>State<input type='text' name='state'></span>
-    <span>Country<input type='text' name='country'></span>
+    <span>Zip Code<input type='text' name='zip'></span>
     <button type='submit'>Checkout</button>
     
     </form>
