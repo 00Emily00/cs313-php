@@ -34,9 +34,9 @@ $city = htmlspecialchars($_POST['city']);
 $state = htmlspecialchars($_POST['state']);
 $zip = htmlspecialchars($_POST['zip']);
 
-echo "This order is for:<br>";
+echo "<div class='confirmation>This order is for:</div><br>";
 echo "<div class='confirmation'>$first $last</div><br>";
-echo "This will be shipped to:<br>";
+echo "<div class='confirmation'>This will be shipped to:</div><br>";
 echo "<div class='confirmation'>$street $city $state $zip </div><br>";
 //echo "<div class='confirmation'>"$street . $city . $state . $zip . "</div><br>"
 //echo "<br>";
