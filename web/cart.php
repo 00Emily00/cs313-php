@@ -30,19 +30,20 @@
         unset($_SESSION["book"][$thing]);
     }
 ?>
-    
+     <div class="border">
     <form action="cart.php" method="post">
     <!--we are checking to see which books the user selected and displaying it-->
     <?php
     foreach ($_SESSION["book"] as $item) {
         
-         echo "<div>$item . ' '</div>";
+         echo $item . " ";
         //we added a button to each book displayed
         echo "<button type='submit' name='delete' value='".$item."'>Delete</button><br>";
     }
 ?>
-        
+    
     </form>
     <a href="checkout.php" id="cartbutton"><button>Checkout</button></a>
+    </div>
 </body>
 </html>

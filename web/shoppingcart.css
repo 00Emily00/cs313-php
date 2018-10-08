@@ -48,3 +48,12 @@ img {
     clear: both;
     display: table;
 }
+#cartbutton {
+    text-align: center;
+}
+.border {
+    width: auto;
+    padding: inherit;
+    border: 5px solid gray;
+    margin: 0;
+}
