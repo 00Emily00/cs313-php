@@ -33,7 +33,7 @@ $street = htmlspecialchars($_POST['street']);
 $city = htmlspecialchars($_POST['city']);
 $state = htmlspecialchars($_POST['state']);
 $zip = htmlspecialchars($_POST['zip']);
-echo "<div class='confirmation'>"$first . " " . $last;
+echo "<div class='confirmation'>"$first . " " . $last . "</div>";
 echo $first;
 echo " ";
 echo $last;
