@@ -19,6 +19,7 @@
 
     <form action="cart.php" method="post">
 	Select the books you would like to add to your cart<br>
+    <div>
     <img src="1984.jpg"><input type="checkbox" name="book[]" value="1984">1984<br>
     <img src="to%20kill%20a%20mockingbird.jpg"><input type="checkbox" name="book[]" value="To Kill a Mockingbird">To Kill a Mockingbird<br>
     <img src="underground%20railroad.jpg"><input type="checkbox" name="book[]" value="The Underground Railroad">The Underground Railroad<br>
@@ -29,7 +30,7 @@
     <img src="little%20prince.jpg"><input type="checkbox" name="book[]" value="The Little Prince">The Little Prince<br>
     <img src="glass%20castle.jpg"><input type="checkbox" name="book[]" value="Glass Castle">Glass Castle<br>
     <img src="hidden%20figures.jpg"><input type="checkbox" name="book[]" value="Hidden Figures">Hidden Figures<br>
-    
+    </div>
     <button type="submit">Checkout</button>
     </form>
 
