@@ -32,9 +32,11 @@
     <div class="column">
     <img src="fahrenheit%20451.jpeg"><input type="checkbox" name="book[]" value="Fahrenheit 451">Fahrenheit 451<br>
         </div>
+<!--
     <div class="column">
     <img src="lovely%20bones.jpg"><input type="checkbox" name="book[]" value="The Lovely Bones">The Lovely Bones<br>
         </div>
+-->
     <div class="column">
     <img src="joy%20luck%20club.jpg"><input type="checkbox" name="book[]" value="They Joy Luck Club">The Joy Luck Club<br>
         </div>
