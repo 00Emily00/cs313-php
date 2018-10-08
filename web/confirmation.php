@@ -14,12 +14,10 @@
         <a href="cart.php">View Cart</a>
         <a href="checkout.php">Checkout</a>
     </div>
-    
-    <h1>Thank You for Shopping with Us</h1>
 <?php
 session_start();
     
-echo "Thank You for shopping with us $fname";
+echo "<h1>Thank You for shopping with us $first</h1>";
 ?>
     
 </body>

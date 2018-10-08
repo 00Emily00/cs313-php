@@ -21,9 +21,9 @@
 <?php
 session_start();
 
-$fname = "first";
+$first = "first";
     
-echo "<p>First name:</p><input type='text' name='first'><br>";
+echo "<p>First name:</p><input type='text' name="'.$first.'"><br>";
 echo "<p>Last name:</p><input type='text' name='last'><br>";
 echo "Address:<br><span>Street<input type='text' name='street'></span>";
 echo "<span>City<input type='text' name='city'></span>";
