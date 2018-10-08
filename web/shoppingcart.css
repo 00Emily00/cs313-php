@@ -68,7 +68,7 @@ img {
     font-family: fantasy;
     color: darkseagreen;
 }
-.cartbutton {
+button {
     background-color: #4CAF50;
     color: white;
     padding: 15px 32px;
@@ -77,4 +77,8 @@ img {
     font-size: 16px;
     margin 4px 2px;
     cursor: pointer;
+}
+#delete {
+    background-color: currentColor;
+    color: currentColor;
 }
