@@ -25,12 +25,19 @@ foreach ($_SESSION["book"] as $item) {
          echo $item . " ";
 }
 
-echo "$_POST['first']";
-echo "$_POST['last']";
-echo "$_POST['street']";
-echo "$_POST['city']";
-echo "$_POST['state']";
-echo "$_POST['country']";
+$first = $_POST['first'];    
+$last = $_POST['last'];
+$street = $_POST['street'];
+$city = $_POST['city'];
+$state = $_POST['state'];
+$country = $_POST['country'];
+    
+echo $first;
+echo $last;
+echo $street;
+echo $city;
+echo $state;
+echo $country;
 ?>
     
     
