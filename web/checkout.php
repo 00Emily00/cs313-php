@@ -15,6 +15,18 @@
         <a class="active" class="active" href="checkout.php">Checkout</a>
     </div>
     
+    <h1>Please Fill in your information</h1>
+    <form>
+        First name:<br>
+        <input type="text" name="first"><br>
+        Last name:<br>
+        <input type="text" name="last"><br><br>
+        Address:<br>
+        <span><input type="text" name="street">Street</span>
+        <span><input type="text" name="city">City</span>
+        <span><input type="text" name="state">State</span>
+    </form>
+    
 <?php
 session_start();
 ?>

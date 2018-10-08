@@ -9,7 +9,7 @@
     
 <body>
     
-<h1>Book Store</h1>
+<h1>Free Book Store</h1>
 
 <div class="topnav">
   <a class="active" href="browse.php">Home</a>
