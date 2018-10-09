@@ -14,12 +14,14 @@
         <a class="active" href="cart.php">View Cart</a>
         <a href="checkout.php">Checkout</a> 
     </div>
-    
+    <h2>Your Order:</h2>
 <?php
   session_start();
     //saving the books the user selected to a container called item. item
     foreach ($_POST["book"] as $item) {
-    $_SESSION["book"][$item] = $item;
+    
+        //$_SESSION["book"] = $item; //
+        $_SESSION["book"][$item] = $item;
     //    echo "session $item";
     }
     
