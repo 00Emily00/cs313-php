@@ -49,6 +49,7 @@
         </div>
     
     </div>
+    <br>
     <button type="submit">Checkout</button>
     </form>
 
