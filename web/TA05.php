@@ -4,13 +4,17 @@
 </head>
 <body>
     <h1>Scripture Resources</h1>
-<?php
-  $book = $_GET['book'];  
-?>   
-<?php
+
 include 'environmentvariable.php';
-    $query = "SELECT * FROM scriptures WHERE book=:book";
-  foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE $book=input') as $row)
+$book = $_GET['book']; 
+    
+$stmt = $db->prepare('SELECT * FROM scriptures WHERE book=:book');
+$stmt->bindValue(':book', $book, PDO::PARAM_INT);
+$stmt->execute();
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    foreach ($rows as $row)
+//  foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE $book=:book') as $row)
 {
       echo '<p><b>' . $row['book'] . ' ';
       echo $row['chapter'] . ':';   
