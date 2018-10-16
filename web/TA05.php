@@ -4,7 +4,7 @@
 </head>
 <body>
     <h1>Scripture Resources</h1>
-
+<?php
 include 'environmentvariable.php';
 $book = $_GET['book']; 
     
