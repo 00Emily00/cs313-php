@@ -10,11 +10,10 @@ include 'environmentvariable.php';
     
   foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
 {
-      echo 'book:' . $row['book'];
-      echo 'chapter: ' . $row['chapter'];   
-      echo 'verse:' . $row['verse'];
-      echo 'content:' . $row['content'];
-      echo '<br/>';
+      echo '<p><b>' . $row['book'] . ' ';
+      echo $row['chapter'] ':';   
+      echo $row['verse'] . '</b> - ';
+      echo $row['content'] . '</p>';
 }  
 ?>
 </body>
