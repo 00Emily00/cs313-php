@@ -4,11 +4,13 @@
 </head>
 <body>
     <h1>Scripture Resources</h1>
-    
+<?php
+  $book ="";  
+?>   
 <?php
 include 'environmentvariable.php';
     
-  foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
+  foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book=input') as $row)
 {
       echo '<p><b>' . $row['book'] . ' ';
       echo $row['chapter'] . ':';   
@@ -17,9 +19,9 @@ include 'environmentvariable.php';
 }  
 ?>
     
-<form action>
-    SEARCH: <input type="text" name="book">
-    
+<form action="TA05.php">
+    SEARCH: <input type="text" name="input">
+    <button type="submit">Search</button>
 
 </form>
 </body>
