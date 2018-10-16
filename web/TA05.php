@@ -16,5 +16,11 @@ include 'environmentvariable.php';
       echo $row['content'] . '</p>';
 }  
 ?>
+    
+<form action>
+    SEARCH: <input type="text" name="book">
+    
+
+</form>
 </body>
 </html>
