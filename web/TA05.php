@@ -5,7 +5,9 @@
 <body>
     <h1>Scripture Resources</h1>
     
-<?php include 'environmentvariable.php'
+<?php
+include 'environmentvariable.php';
+    
   foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
 {
       echo 'book:' . $row['book'];
