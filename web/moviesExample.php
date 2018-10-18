@@ -1,6 +1,6 @@
 <?php
 //1. connect to db
-require('environmentvarible.php'); //call it dbConnect.php
+require('environmentvariable.php'); //call it dbConnect.php
 $db = get_db();
 //2. Query for all movies
 $stmt = $db->prepare('SELECT id,title, year FROM movie');
