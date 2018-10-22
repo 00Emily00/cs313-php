@@ -9,7 +9,7 @@ require ('dbConnect.php');
 $db = get_db();
 $questions = $_GET['question']; 
     
-$stmt = $db->prepare('SELECT * FROM questions');
+$stmt = $db->prepare('SELECT * FROM questions INNER JOIN questionanswer ON questions.questionid = questionanswer.qid');
 //$stmt->bindValue(':question', $question, PDO::PARAM_INT);
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -18,6 +18,8 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php
 foreach ($rows as $row)
     echo '<img src="' . $row['questions'] . '">';
+    echo $row;
+    
 //    foreach ($rows as $row)
 //  foreach ($db->query('SELECT questions FROM questions WHERE $question=:question'))
 //{
