@@ -9,7 +9,7 @@ require ('dbConnect.php');
 $db = get_db();
 $questions = $_GET['question']; 
     
-$stmt = $db->prepare('SELECT questions.questions, answers.answers FROM ((questions, answers INNER JOIN questionanswer ON questions.questionid = questionanswer.qid) INNER JOIN questionanswer ON answers.answersid = questionanswer.aid)');
+$stmt = $db->prepare('SELECT * FROM questions q INNER JOIN questionanswer qa ON q.questionid = qa.qid');
 //$stmt->bindValue(':question', $question, PDO::PARAM_INT);
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -18,7 +18,18 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php
 foreach ($rows as $row)
 {
+    $question_id = $row['id'];
+    
     echo '<img src="' . $row['questions'] . '">';
+    
+//    $stmt = $db->prepare('SELECT * FROM answers a INNER JOIN questionanswer qa ON a.answerid = qa.qid');
+////$stmt->bindValue(':question', $question, PDO::PARAM_INT);
+//$stmt->execute();
+//$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//    
+    
+    
+    
     echo $row['aid'];
 } 
     
