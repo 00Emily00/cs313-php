@@ -25,8 +25,8 @@ foreach ($rows as $row)
 //}  
 //                
 ?>
-   <img src="https://farm2.staticflickr.com/1960/45496420231_d7421e1e1a.jpg">
-<!--
+   
+    <!--
 <form action="" method="get">
     SEARCH: <input type="text" name="submit">
     <button type="submit">Submit</button>
