@@ -25,7 +25,7 @@ foreach ($rows as $row)
 //}  
 //                
 ?>
-   <img href="https://www.flickr.com/photos/160063694@N06/31623835448/in/dateposted-public/">
+   <img href="https://flic.kr/p/2cjn3Et">
 <!--
 <form action="" method="get">
     SEARCH: <input type="text" name="submit">
