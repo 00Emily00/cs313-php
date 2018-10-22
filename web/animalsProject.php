@@ -24,16 +24,16 @@ foreach ($rows as $row)
     
 $stmt = $db->prepare('SELECT * FROM answers a INNER JOIN questionanswer qa ON a.answerid = qa.aid');
 $stmt->execute();
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$rowsA = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
-    foreach($rows as $correct_answer)
+    foreach($rowsA as $correct_answer)
     {
         
         echo $row['answers'];
     }
     
     
-    echo $row['aid'];
+//    echo $row['aid'];
 } 
     
 //    foreach ($rows as $row)
