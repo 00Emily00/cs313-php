@@ -3,20 +3,20 @@
 <head>   
 </head>
 <body>
-    <h1>Scripture Resources</h1>
+    <h1>Get to know your animals</h1>
 <?php
 include 'dbConnect.php';
 $questions = $_GET['question']; 
     
-$stmt = $db->prepare('SELECT * FROM  WHERE book=:book');
-$stmt->bindValue(':book', $book, PDO::PARAM_INT);
+$stmt = $db->prepare('SELECT * FROM  WHERE question=:question');
+$stmt->bindValue(':question', $question, PDO::PARAM_INT);
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
-    foreach ($rows as $row)
-//  foreach ($db->query('SELECT questions FROM questions WHERE $book=:book') as $row)
+//    foreach ($rows as $row)
+  foreach ($db->query('SELECT questions FROM questions WHERE $question=:question'))
 {
-      echo '<p><b>' . $row['question'] . ' ';
+      echo '<p><b>' . ['question'] . ' ';
 }  
                 
 ?>
