@@ -20,7 +20,7 @@ foreach ($rows as $row)
 {
     $question_id = $row['id'];
     
-    echo '<img src="' . $row['questions'] . '">';
+    echo '<img src="' . $row['questions'] . '"><br>';
     
 //    $stmt = $db->prepare('SELECT * FROM answers a INNER JOIN questionanswer qa ON a.answerid = qa.qid');
 ////$stmt->bindValue(':question', $question, PDO::PARAM_INT);
