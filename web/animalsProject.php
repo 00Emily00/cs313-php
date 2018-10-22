@@ -16,6 +16,8 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
     
 <?php
+    require ('dbConnect.php');
+$db = get_db();
 foreach ($rows as $row)
 {
     $question_id = $row['id'];
