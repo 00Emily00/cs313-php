@@ -22,7 +22,11 @@ foreach ($rows as $row)
     
     echo '<img src="' . $row['questions'] . '"><br>';
     
-$stmt = $db->prepare('SELECT * FROM answers a INNER JOIN questionanswer qa ON a.answerid = qa.aid');
+    
+    
+//    echo $row['aid'];
+} 
+    $stmt = $db->prepare('SELECT * FROM answers a INNER JOIN questionanswer qa ON a.answerid = qa.aid');
 $stmt->execute();
 $rowsA = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
@@ -31,10 +35,6 @@ $rowsA = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
         echo $row['answers'];
     }
-    
-    
-//    echo $row['aid'];
-} 
     
 //    foreach ($rows as $row)
 //  foreach ($db->query('SELECT questions FROM questions WHERE $question=:question'))
