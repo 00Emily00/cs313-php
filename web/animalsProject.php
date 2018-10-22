@@ -12,13 +12,12 @@ $questions = $_GET['question'];
 $stmt = $db->prepare('SELECT * FROM questions');
 //$stmt->bindValue(':question', $question, PDO::PARAM_INT);
 $stmt->execute();
-$questions = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
     
 <?php
-foreach ($questions as $question)
-    $questions = $questions['questions'];
-    echo $questions;
+foreach ($rows as $row)
+    echo $row['questions'] . ' ';
 //    foreach ($rows as $row)
 //  foreach ($db->query('SELECT questions FROM questions WHERE $question=:question'))
 //{
