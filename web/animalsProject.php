@@ -30,7 +30,7 @@ foreach ($rows as $row)
     
     
     
-    echo $row['aid'];
+//    echo $row['aid'];
 } 
     
 //    foreach ($rows as $row)
