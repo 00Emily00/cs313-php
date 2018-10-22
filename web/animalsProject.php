@@ -16,20 +16,19 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
     
 <?php
-    require ('dbConnect.php');
-$db = get_db();
 foreach ($rows as $row)
 {
     $question_id = $row['id'];
     
     echo '<img src="' . $row['questions'] . '"><br>';
     
-$stmt = $db->prepare('SELECT * FROM answers a INNER JOIN questionanswer qa ON a.answers = qa.aid');
+$stmt = $db->prepare('SELECT * FROM answers a INNER JOIN questionanswer qa ON a.answerid = qa.aid');
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     foreach($rows as $correct_answer)
     {
+        
         echo $row['answers'];
     }
     
