@@ -9,7 +9,7 @@ require ('dbConnect.php');
 $db = get_db();
 $questions = $_GET['question']; 
     
-$stmt = $db->prepare('SELECT * FROM questions, answers INNER JOIN questionanswer ON questions.questionid = questionanswer.qid, questionanswer.aid');
+$stmt = $db->prepare('SELECT questions.questions, answers.answers FROM ((questions, answers INNER JOIN questionanswer ON questions.questionid = questionanswer.qid) INNER JOIN questionanswer ON answers.answersid = questionanswer.aid)');
 //$stmt->bindValue(':question', $question, PDO::PARAM_INT);
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
