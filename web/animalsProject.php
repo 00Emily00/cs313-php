@@ -25,7 +25,7 @@ foreach ($rows as $row)
 //}  
 //                
 ?>
-   <img href="https://flic.kr/p/2cjn3Et">
+   <img href="[url=https://flic.kr/p/2cjn3Et][img]https://farm2.staticflickr.com/1960/45496420231_d7421e1e1a.jpg[/img][/url][url=https://flic.kr/p/2cjn3Et]bears[/url] by [url=https://www.flickr.com/photos/160063694@N06/]Emily Barrera[/url], on Flickr">
 <!--
 <form action="" method="get">
     SEARCH: <input type="text" name="submit">
