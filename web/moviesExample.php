@@ -4,8 +4,8 @@ require('environmentvariable.php'); //call it dbConnect.php
 $db = get_db();
 //2. Query for all movies
 $stmt = $db->prepare('SELECT id,title, year FROM movie');
-$stm->execute();
-$rows = $stm->fetchAll(PDO::FETCH_ASSOC);
+$stmt->execute();
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //3.Go through each movie in the result and display it
 ?>
 
@@ -23,7 +23,8 @@ $rows = $stm->fetchAll(PDO::FETCH_ASSOC);
         foreach($movies as $movie) {
             $title = $movie['title'];
             $year = $movie['year'];
-            echo"<li><p>$title ($year</p></li>";
+            echo"<li><p>$title ($year)</p></li>";
+//            echo"<li><p><a href='movieDetails.php?movie_id=$id'>$title ($year</p></li>"; //to make it into a link
         }
         ?>
         <li><p></p></li>
