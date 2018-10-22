@@ -22,13 +22,13 @@ foreach ($rows as $row)
     
     echo '<img src="' . $row['questions'] . '"><br>';
     
-$stmt = $db->prepare('SELECT * FROM answers a INNER JOIN questionanswer qa ON a.answerid = qa.qid WHERE qid=aid');
+$stmt = $db->prepare('SELECT * FROM answers a INNER JOIN questionanswer qa ON a.answerid = qa.qid');
 $stmt->execute();
-$answer_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
-    foreach($answer_rows as $answer_row)
+    foreach($rows as $correct_answer)
     {
-        echo $answer_rows['aid'];
+        echo $row['answers'];
     }
     
     
