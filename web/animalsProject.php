@@ -18,7 +18,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php
 foreach ($rows as $row)
     echo '<img src="' . $row['questions'] . '">';
-    echo $row;
+    echo $row['aid'];
     
 //    foreach ($rows as $row)
 //  foreach ($db->query('SELECT questions FROM questions WHERE $question=:question'))
