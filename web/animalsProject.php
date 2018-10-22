@@ -9,18 +9,18 @@ require ('dbConnect.php');
 $db = get_db();
 $questions = $_GET['question']; 
     
-//$stmt = $db->prepare('SELECT * FROM questions q INNER JOIN questionanswer qa ON q.questionid = qa.qid');
-////$stmt->bindValue(':question', $question, PDO::PARAM_INT);
-//$stmt->execute();
-//$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$stmt = $db->prepare('SELECT * FROM questions q INNER JOIN questionanswer qa ON q.questionid = qa.qid');
+//$stmt->bindValue(':question', $question, PDO::PARAM_INT);
+$stmt->execute();
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
     
 <?php
-//foreach ($rows as $row)
-//{
-//    $question_id = $row['id'];
-//    
-//    echo '<img src="' . $row['questions'] . '"><br>';
+foreach ($rows as $row)
+{
+    $question_id = $row['id'];
+    
+    echo '<img src="' . $row['questions'] . '"><br>';
     
 $stmt = $db->prepare('SELECT * FROM answers a INNER JOIN questionanswer qa ON a.answerid = qa.aid');
 $stmt->execute();
@@ -33,8 +33,8 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     
     
-//    echo $row['aid'];
-//} 
+    echo $row['aid'];
+} 
     
 //    foreach ($rows as $row)
 //  foreach ($db->query('SELECT questions FROM questions WHERE $question=:question'))
