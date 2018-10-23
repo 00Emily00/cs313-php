@@ -19,7 +19,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php
     foreach($rows as $row)
     {
-        echo '<img src="' . $row['questions'] . '" >' . ' ' . '<input type="radio" . $row['answers'] . '" . '<br>';
+        echo '<img src="' . $row['questions'] . '" >' . ' ' . $row['answers'] . '<br>';
     }
 ?>
 
