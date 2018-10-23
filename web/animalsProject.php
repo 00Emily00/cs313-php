@@ -8,6 +8,7 @@
 require ('dbConnect.php');
 $db = get_db();
 $questions = $_GET['question']; 
+
     
 //$stmt = $db->prepare("SELECT * FROM questions q INNER JOIN questionanswer qa ON q.questionid = qa.qid WHERE questionid=1");
     $stmt = $db->prepare("SELECT q.questions, a.answers FROM questions q JOIN questionanswer qa ON q.questionId=qa.qid JOIN answers a ON qa.aid=a.answerId");
@@ -20,9 +21,18 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach($rows as $row)
     {
         echo '<img src="' . $row['questions'] . '" >' . ' ' . $row['answers'] . '<br>';
+     
+        echo (rand($row['answers']));
+        //pick a random number,
+        //$rand = _____ random number
+        //$rows[1]['answers']
+        //$rows[$rand]['answers']
+        
         
 //        echo '<img src="' . $row['questions'] . '" >' . ' ' . '<input type="radio" name="animals" value="' . $row['answers'] . '">' . $row['answers']' . '<br>';
     }
+    
+    
 ?>
     <!--
 
