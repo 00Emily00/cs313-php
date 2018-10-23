@@ -23,7 +23,7 @@ foreach ($rows as $row)
     echo '<img src="' . $row['questions'] . '"><br>';
     
 
-$stmt = $db->prepare('SELECT * FROM answers a INNER JOIN questionanswer qa ON a.answerid = qa.aid WHERE qid=aid');
+$stmt = $db->prepare('SELECT * FROM answers a INNER JOIN questionanswer qa ON a.answerid = qa.aid WHERE answerid=questionid');
 $stmt->execute();
 $rowsA = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
