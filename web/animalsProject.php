@@ -19,10 +19,11 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php
     foreach($rows as $row)
     {
-        echo '<img src="' . $row['questions'] . '" >' . ' ' . '<input type="radio" name="animals" value="' . $row['answers'] . '">$row['answers']' . '<br>';
+        echo '<img src="' . $row['questions'] . '" >' . ' ' . $row['answers'] . '<br>';
+        
+//        echo '<img src="' . $row['questions'] . '" >' . ' ' . '<input type="radio" name="animals" value="' . $row['answers'] . '">' . $row['answers']' . '<br>';
     }
 ?>
-<!--<input type="radio" name="answers" value="question">gorilla<br>-->
     <!--
 
 //$stmt = $db->prepare("SELECT * FROM questions q INNER JOIN questionanswer qa ON q.questionid = qa.qid WHERE questionid=1");
