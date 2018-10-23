@@ -16,7 +16,8 @@ $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
     
-<?php
+<!--
+//////////
 //foreach ($rows as $row)
 //{
 //    $question_id = $row['id'];
@@ -35,13 +36,14 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //    }
     
 //    echo $row['aid'];
-} 
+//////////////
 
- <?php   
+ //////  
 //$stmt = $db->prepare("SELECT q.questions, a.answers FROM questions q JOIN questionanswer qa ON q.questionId=qa.qid JOIN answers a ON qa.aid=a.answerId");
 //$stmt->execute();
 //$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-?>
+/////
+-->
 <?php
     foreach($rows as $row)
     {
