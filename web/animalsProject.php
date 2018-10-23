@@ -30,7 +30,7 @@ $rowsA = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach($rowsA as $correct_answer)
     {
         
-        echo $correct_answer['answers'] . '<img src="' . $row['question_id'] . '<br>';
+        echo $correct_answer['answers'] . '<img src="' . $row['questionsId'] . '<br>';
     }
     
 //    echo $row['aid'];
