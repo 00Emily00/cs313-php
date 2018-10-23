@@ -35,6 +35,20 @@ $rowsA = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
 //    echo $row['aid'];
 } 
+
+ <?php   
+$stmt = $db->prepare("SELECT q.questions, a.answers FROM questions q JOIN questionanswer qa ON q.questionId=qa.qid JOIN answers a ON qa.aid=a.answerId");
+$stmt->execute();
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+<?php
+    foreach($rows as $row)
+    {
+        echo '<img src="' . $row['questions'] . '" >' . ' ' . $row['answers'] . '<br>';
+    }
+?>
+
+<!--
    
 //    foreach ($rows as $row)
 //  foreach ($db->query('SELECT questions FROM questions WHERE $question=:question'))
@@ -43,6 +57,7 @@ $rowsA = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //}  
 //                
 ?>
+-->
    
     <!--
 <form action="" method="get">
