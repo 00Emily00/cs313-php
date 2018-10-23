@@ -22,7 +22,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     {
         echo '<img src="' . $row['questions'] . '" >' . ' ' . $row['answers'] . '<br>';
      
-        echo (rand($row['answers']));
+//        echo (rand($row['answers']));
         //pick a random number,
         //$rand = _____ random number
         //$rows[1]['answers']
@@ -33,6 +33,18 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     
     
+?>
+<?php
+   $stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 4");
+//$stmt->bindValue(':question', $question, PDO::PARAM_INT);
+$stmt->execute();
+$rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);  
+?>
+<?php
+    foreach($rowsAnswers as $rowsAnswer)
+    {
+        echo $rowsAnswer['answers'];
+    }
 ?>
     <!--
 
