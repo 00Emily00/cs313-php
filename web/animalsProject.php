@@ -16,7 +16,16 @@ $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
     
-<!--
+<?php
+    foreach($rows as $row)
+    {
+        echo '<img src="' . $row['questions'] . '" >' . ' ' . '<input type="radio" . $row['answers'] . '" . '<br>';
+    }
+?>
+
+    <!--
+
+//$stmt = $db->prepare("SELECT * FROM questions q INNER JOIN questionanswer qa ON q.questionid = qa.qid WHERE questionid=1");
 //////////
 //foreach ($rows as $row)
 //{
@@ -44,13 +53,6 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 /////
 -->
-<?php
-    foreach($rows as $row)
-    {
-        echo '<img src="' . $row['questions'] . '" >' . ' ' . $row['answers'] . '<br>';
-    }
-?>
-
 <!--
    
 //    foreach ($rows as $row)
