@@ -20,7 +20,7 @@ foreach ($rows as $row)
 {
     $question_id = $row['id'];
     
-//    echo '<img src="' . $row['questions'] . '"><br>';
+    echo '<img src="' . $row['questions'] . '"><br>';
     
 
 $stmt = $db->prepare('SELECT * FROM answers a INNER JOIN questionanswer qa ON a.answerid = qa.aid WHERE aid=qid');
@@ -30,7 +30,7 @@ $rowsA = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach($rowsA as $correct_answer)
     {
         
-        echo $correct_answer['answers'] . '<img src="' . $row['questionsId'] . '<br>';
+        echo $correct_answer['answers'] . '<br>';
     }
     
 //    echo $row['aid'];
