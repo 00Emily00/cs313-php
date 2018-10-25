@@ -23,14 +23,17 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php
     foreach($rows as $row)
     {
-        echo '<img src="' . $row['questions'] . '" >' . ' ';
+        echo '<img src="' . $row['questions'] . '" >' . ' '; //display image once
         
 //        foreach($rowsAnswers as $rowsAnswer) {
         echo '<input type="radio" name="animal" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
 //        foreach($rowsAnswers as $rowsAnswer)
+//         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
+////        echo $rowsAnswer['answers'];
+    }
+      foreach($rowsAnswers as $rowsAnswer)
          echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
 //        echo $rowsAnswer['answers'];
-   // }
     }
     
     
