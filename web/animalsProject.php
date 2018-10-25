@@ -20,8 +20,8 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php
     foreach($rows as $row)
     {
-        echo '<img src="' . $row['questions'] . '" >' . ' ' . '<input type="radio" name="animal" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
-     
+        echo '<img src="' . $row['questions'] . '" >' . ' ' . '<input type="radio" name="animal" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';  
+
         <?php
    $stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 4");
 //$stmt->bindValue(':question', $question, PDO::PARAM_INT);
@@ -34,14 +34,6 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo $rowsAnswer['answers'];
     }
 ?>
-//        echo (rand($row['answers']));
-        //pick a random number,
-        //$rand = _____ random number
-        //$rows[1]['answers']
-        //$rows[$rand]['answers']
-        
-        
-//        echo '<img src="' . $row['questions'] . '" >' . ' ' . '<input type="radio" name="animals" value="' . $row['answers'] . '">' . $row['answers']' . '<br>';
     }
     
     
@@ -94,6 +86,14 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <button type="submit">Submit</button>
 -->
 <!--</form>-->
-    
+<!--
+    //        echo (rand($row['answers']));
+        //pick a random number,
+        //$rand = _____ random number
+        //$rows[1]['answers']
+        //$rows[$rand]['answers']
+        
+-->
+        
 </body>
 </html>
