@@ -31,7 +31,7 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
 ////        echo $rowsAnswer['answers'];
     }
-      foreach($rowsAnswers as $rowsAnswer)
+      foreach($rowsAnswers as $rowsAnswer) {
          echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
 //        echo $rowsAnswer['answers'];
     }
