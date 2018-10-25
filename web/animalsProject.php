@@ -32,7 +32,6 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
     {
         echo $rowsAnswer['answers'];
     }
-?>
     
 ?>
 
