@@ -30,7 +30,7 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     foreach($rowsAnswers as $rowsAnswer)
     {
-        '<input type="radio" name="animal" value="' . $rowAnswer['answers'] . '">' . $rowAnswer['answers'] . '<br>';
+        '<input type="radio" name="animalRandom" value="' . $rowAnswer['answers'] . '">' . $rowAnswer['answers'] . '<br>';
 //        echo $rowsAnswer['answers'];
     }
     }
