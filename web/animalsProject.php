@@ -28,7 +28,7 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo '<img src="' . $row['questions'] . '" >' . ' ' . '<input type="radio" name="animal" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';  
         
              echo '<input type="radio" name="animal2" value="' . $rowAnswer['answers'] . '">' . $rowAnswer['answers'] . '<br>';
-
+        debug_to_console("TEST");
 //        foreach($rowsAnswers as $rowsAnswer)
 //    {
 //         echo '<input type="radio" name="animal2" value="' . $rowAnswer['answers'] . '">' . $rowAnswer['answers'] . '<br>';
