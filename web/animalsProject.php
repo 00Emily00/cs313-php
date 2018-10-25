@@ -16,7 +16,7 @@ $questions = $_GET['question'];
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
-    <?php
+<?php
    $stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 4");
 //$stmt->bindValue(':question', $question, PDO::PARAM_INT);
 $stmt->execute();
@@ -28,11 +28,12 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo '<img src="' . $row['questions'] . '" >' . ' ' . '<input type="radio" name="animal" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';  
 
     
-    foreach($rowsAnswers as $rowsAnswer)
+   
+    }
+     foreach($rowsAnswers as $rowsAnswer)
     {
         '<input type="radio" name="animalRandom" value="' . $rowAnswer['answers'] . '">' . $rowAnswer['answers'] . '<br>';
 //        echo $rowsAnswer['answers'];
-    }
     }
     
     
