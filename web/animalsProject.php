@@ -9,19 +9,17 @@ require ('dbConnect.php');
 $db = get_db();
 $questions = $_GET['question']; 
 
-    
-//$stmt = $db->prepare("SELECT * FROM questions q INNER JOIN questionanswer qa ON q.questionid = qa.qid WHERE questionid=1");
-    $stmt = $db->prepare("SELECT q.questions, a.answers FROM questions q JOIN questionanswer qa ON q.questionId=qa.qid JOIN answers a ON qa.aid=a.answerId");
-//$stmt->bindValue(':question', $question, PDO::PARAM_INT);
+$stmt = $db->prepare("SELECT q.questions, a.answers FROM questions q JOIN questionanswer qa ON q.questionId=qa.qid JOIN answers a ON qa.aid=a.answerId");
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
-      <?php
-   $stmt = $db->prepare("SELECT q.questions, a.answers FROM questions q JOIN questionanswer qa ON q.questionId=qa.qid JOIN answers a ON qa.aid=a.answerId ORDER BY RANDOM() LIMIT 4");
-//$stmt->bindValue(':question', $question, PDO::PARAM_INT);
+    
+<?php
+$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 4");
 $stmt->execute();
 $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);  
-?>  
+?> 
+    
 <?php
     foreach($rows as $row)
     {
@@ -29,8 +27,8 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         foreach($rowsAnswers as $rowsAnswer)
     {
-         echo '<input type="radio" name="animal2" value="' . $rowAnswer['answers'] . '">' . $rowAnswer['answers'] . '<br>';
-//        echo $rowsAnswer['answers'];
+//         echo '<input type="radio" name="animal2" value="' . $rowAnswer['answers'] . '">' . $rowAnswer['answers'] . '<br>';
+        echo $rowsAnswer['answers'];
     }
     }
     
