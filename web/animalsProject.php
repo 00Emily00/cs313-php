@@ -15,7 +15,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
     
 <?php
-$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 4");
+$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 1");
 $stmt->execute();
 $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);  
 ?> 
