@@ -17,7 +17,7 @@ $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
       <?php
-   $stmt = $db->prepare("SELECT q.questions, a.answers FROM questions q JOIN answers a ON qa.aid=a.answerId ORDER BY RANDOM() LIMIT 4");
+   $stmt = $db->prepare("SELECT q.questions, a.answers FROM questions q JOIN questionanswer qa ON q.questionId=qa.qid JOIN answers a ON qa.aid=a.answerId ORDER BY RANDOM() LIMIT 4");
 //$stmt->bindValue(':question', $question, PDO::PARAM_INT);
 $stmt->execute();
 $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);  
