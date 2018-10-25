@@ -9,25 +9,25 @@ require ('dbConnect.php');
 $db = get_db();
 $questions = $_GET['question']; 
 
-$stmt = $db->prepare("SELECT q.questions, a.answers FROM questions q JOIN questionanswer qa ON q.questionId=qa.qid JOIN answers a ON qa.aid=a.answerId");
+$stmt = $db->prepare("SELECT q.questions, a.answers FROM questions q JOIN questionanswer qa ON q.questionId=qa.qid JOIN answers a ON qa.aid=a.answerId UNION SELECT answers FROM answers ORDER BY RANDOM() LIMIT 4");
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
     
 <?php
-$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 4");
-$stmt->execute();
-$rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);  
+//$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 4");
+//$stmt->execute();
+//$rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);  
 ?> 
     
 <?php
-    foreach($rows as $row && $rowsAnswers as $rowsAnswer)
+    foreach($rows as $row)
     {
         echo '<img src="' . $row['questions'] . '" >' . ' '; //display image once
         
 //        foreach($rowsAnswers as $rowsAnswer) {
         echo '<input type="radio" name="animal" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
-         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
+//         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
 //        foreach($rowsAnswers as $rowsAnswer)
 //         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
 ////        echo $rowsAnswer['answers'];
