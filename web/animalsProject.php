@@ -27,17 +27,16 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
 //        foreach($rowsAnswers as $rowsAnswer) {
         echo '<input type="radio" name="animal" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
-         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
 //        foreach($rowsAnswers as $rowsAnswer)
 //         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
 ////        echo $rowsAnswer['answers'];
     }
-//    foreach($rows as $row) {
-//      foreach($rowsAnswers as $rowsAnswer) {
-//         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
-////        echo $rowsAnswer['answers'];
-//      }
-//    }
+    foreach($rows as $row) {
+      foreach($rowsAnswers as $rowsAnswer) {
+         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
+//        echo $rowsAnswer['answers'];
+      }
+    }
     
     
 ?>
