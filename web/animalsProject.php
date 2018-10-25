@@ -22,6 +22,18 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     {
         echo '<img src="' . $row['questions'] . '" >' . ' ' . '<input type="radio" name="animal" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
      
+        <?php
+   $stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 4");
+//$stmt->bindValue(':question', $question, PDO::PARAM_INT);
+$stmt->execute();
+$rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);  
+?>
+<?php
+    foreach($rowsAnswers as $rowsAnswer)
+    {
+        echo $rowsAnswer['answers'];
+    }
+?>
 //        echo (rand($row['answers']));
         //pick a random number,
         //$rand = _____ random number
@@ -34,18 +46,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     
 ?>
-<?php
-   $stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 4");
-//$stmt->bindValue(':question', $question, PDO::PARAM_INT);
-$stmt->execute();
-$rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);  
-?>
-<?php
-    foreach($rowsAnswers as $rowsAnswer)
-    {
-        echo $rowsAnswer['answers'];
-    }
-?>
+
     <!--
 
 //$stmt = $db->prepare("SELECT * FROM questions q INNER JOIN questionanswer qa ON q.questionid = qa.qid WHERE questionid=1");
