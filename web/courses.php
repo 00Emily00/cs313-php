@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html>
-
-<?php
-    
+<?php    
 require('dbConnect.php');
 $db = get_db();
 $query ='SELECT id, code, name FROM course2';
 $stmt = $db->prepare($query);
 $stmt = execute();
-$stmt->fetchAll(PDO::FETCH_ASSOC);
+$courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
-    
+<!DOCTYPE html>
+<html> 
 <head><title>Courses</title></head>
 
 <body>
