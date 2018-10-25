@@ -18,7 +18,7 @@ $stmt->fetchAll(PDO::FETCH_ASSOC);
     
 <ul>
 <?php
-  foreach $courses as $course) {
+  foreach ($courses as $course) {
       $id = $course2['id'];
       $name = $course2['name'];
       $code = $course2['code'];
