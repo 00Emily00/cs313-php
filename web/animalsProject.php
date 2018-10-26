@@ -17,10 +17,15 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php
 $stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 1");
 $stmt->execute();
-$rowsAnswers1 = $stmt->fetchAll(PDO::FETCH_ASSOC);  
+$rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);  
 ?> 
     
 <?php
+$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 1");
+$stmt->execute();
+$rowsAnswers1 = $stmt->fetchAll(PDO::FETCH_ASSOC);  
+?>
+    <?php
 $stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 1");
 $stmt->execute();
 $rowsAnswers2 = $stmt->fetchAll(PDO::FETCH_ASSOC);  
@@ -36,18 +41,18 @@ $rowsAnswers2 = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo '<input type="radio" name="animal" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
         
 //        foreach($rows as $row) {
-      foreach($rowsAnswers1 as $rowsAnswer1) {
+      foreach($rowsAnswers as $rowsAnswer) {
+         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
+
+//        echo $rowsAnswer['answers'];
+      //}
+    }foreach($rowsAnswer1 as $rowsAnswer1) {
          echo '<input type="radio" name="animal" value="' . $rowsAnswer1['answers'] . '">' . $rowsAnswer1['answers'] . '<br>';
 
 //        echo $rowsAnswer['answers'];
       //}
-    }foreach($rowsAnswer2 as $rowsAnswer2) {
+    }foreach($rowsAnswers2 as $rowsAnswer2) {
          echo '<input type="radio" name="animal" value="' . $rowsAnswer2['answers'] . '">' . $rowsAnswer2['answers'] . '<br>';
-
-//        echo $rowsAnswer['answers'];
-      //}
-    }foreach($rowsAnswers3 as $rowsAnswer3) {
-         echo '<input type="radio" name="animal" value="' . $rowsAnswer3['answers'] . '">' . $rowsAnswer3['answers'] . '<br>';
 
 //        echo $rowsAnswer['answers'];
       //}
