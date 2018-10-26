@@ -30,7 +30,11 @@ $stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 1");
 $stmt->execute();
 $rowsAnswers2 = $stmt->fetchAll(PDO::FETCH_ASSOC);  
 ?>
-    
+<?php
+$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 1");
+$stmt->execute();
+$rowsAnswers3 = $stmt->fetchAll(PDO::FETCH_ASSOC);  
+?>  
     
 <?php
     foreach($rows as $row)
@@ -53,6 +57,12 @@ $rowsAnswers2 = $stmt->fetchAll(PDO::FETCH_ASSOC);
       //}
     }foreach($rowsAnswers2 as $rowsAnswer2) {
          echo '<input type="radio" name="animal" value="' . $rowsAnswer2['answers'] . '">' . $rowsAnswer2['answers'] . '<br>';
+
+//        echo $rowsAnswer['answers'];
+      //}
+    }
+        foreach($rowsAnswers3 as $rowsAnswer3) {
+         echo '<input type="radio" name="animal" value="' . $rowsAnswer3['answers'] . '">' . $rowsAnswer3['answers'] . '<br>';
 
 //        echo $rowsAnswer['answers'];
       //}
