@@ -62,9 +62,9 @@ $rowsAnswers3 = $stmt->fetchAll(PDO::FETCH_ASSOC);
       //}
     }
         foreach($rowsAnswers3 as $rowsAnswer3) {
-//         echo '<input type="radio" name="animal" value="' . $rowsAnswer3['answers'] . '">' . $rowsAnswer3['answers'] . '<br>';
+         echo rand('<input type="radio" name="animal" value="' . $rowsAnswer3['answers'] . '">' . $rowsAnswer3['answers']) . '<br>';
 
-        echo rand($rowsAnswer['answers']);
+//        echo $rowsAnswer['answers'];
       //}
     }
         
