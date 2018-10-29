@@ -49,7 +49,7 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo '<input type="radio" name="animal" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
         
       foreach($rowsAnswers as $rowsAnswer) {
-         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
+         echo '<input type="radio" name="animal" value="' . shuffle($rowsAnswer['answers']) . '">' . $rowsAnswer['answers'] . '<br>';
 //
 //    }foreach($rowsAnswer1 as $rowsAnswer1) {
 //         echo '<input type="radio" name="animal" value="' . $rowsAnswer1['answers'] . '">' . $rowsAnswer1['answers'] . '<br>';
