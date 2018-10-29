@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Learn your Animals</title>
-    <script src="animalsProject.css"></script>
+    <link rel="stylesheet" href="animalsProject.css">
 </head>
 <body>
     <h1>Get to know your animals</h1>
