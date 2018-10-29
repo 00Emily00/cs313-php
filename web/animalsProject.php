@@ -9,7 +9,7 @@ require ('dbConnect.php');
 $db = get_db();
 $questions = $_GET['question']; 
 
-$stmt = $db->prepare("SELECT q.questions, a.answers FROM questions q JOIN questionanswer qa ON q.questionId=qa.qid JOIN answers a ON qa.aid=a.answerId");
+$stmt = $db->prepare("SELECT q.questions, a.answers FROM questions q JOIN questionanswer qa ON q.questionId=qa.qid JOIN answers a ON qa.aid=a.answerId"); //order by rand()
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -43,36 +43,37 @@ $rowsAnswers3 = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
 //        foreach($rowsAnswers as $rowsAnswer) {
         echo '<input type="radio" name="animal" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
-        
-//        foreach($rows as $row) {
-      foreach($rowsAnswers as $rowsAnswer) {
-         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
-
-//        echo $rowsAnswer['answers'];
-      //}
-    }foreach($rowsAnswer1 as $rowsAnswer1) {
-         echo '<input type="radio" name="animal" value="' . $rowsAnswer1['answers'] . '">' . $rowsAnswer1['answers'] . '<br>';
-
-//        echo $rowsAnswer['answers'];
-      //}
-    }foreach($rowsAnswers2 as $rowsAnswer2) {
-         echo '<input type="radio" name="animal" value="' . $rowsAnswer2['answers'] . '">' . $rowsAnswer2['answers'] . '<br>';
-
-//        echo $rowsAnswer['answers'];
-      //}
-    }
-        foreach($rowsAnswers3 as $rowsAnswer3) {
-         echo rand('<input type="radio" name="animal" value="' . $rowsAnswer3['answers'] . '">' . $rowsAnswer3['answers']) . '<br>';
-
-//        echo $rowsAnswer['answers'];
-      //}
-    }
-        
-//        foreach($rowsAnswers as $rowsAnswer)
-//         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
-////        echo $rowsAnswer['answers'];
-    }
     
+        
+////        foreach($rows as $row) {
+//      foreach($rowsAnswers as $rowsAnswer) {
+//         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
+//
+////        echo $rowsAnswer['answers'];
+//      //}
+//    }foreach($rowsAnswer1 as $rowsAnswer1) {
+//         echo '<input type="radio" name="animal" value="' . $rowsAnswer1['answers'] . '">' . $rowsAnswer1['answers'] . '<br>';
+//
+////        echo $rowsAnswer['answers'];
+//      //}
+//    }foreach($rowsAnswers2 as $rowsAnswer2) {
+//         echo '<input type="radio" name="animal" value="' . $rowsAnswer2['answers'] . '">' . $rowsAnswer2['answers'] . '<br>';
+//
+////        echo $rowsAnswer['answers'];
+//      //}
+//    }
+//        foreach($rowsAnswers3 as $rowsAnswer3) {
+//         echo '<input type="radio" name="animal" value="' . $rowsAnswer3['answers'] . '">' . $rowsAnswer3['answers'] . '<br>';
+//
+////        echo $rowsAnswer['answers'];
+//      //}
+//    }
+        
+        foreach($rowsAnswers as $rowsAnswer) {
+         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
+//        echo $rowsAnswer['answers'];
+    }
+    }
     
 ?>
 
