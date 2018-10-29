@@ -17,11 +17,9 @@ $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
     
-<?php
-$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 3");
-$stmt->execute();
-$rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);  
-?> 
+<!--
+
+-->
     
 
 <?php
@@ -48,7 +46,10 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
         echo '<input type="radio" name="animal" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
         
-        
+    
+$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 3");
+$stmt->execute();
+$rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);   
       foreach($rowsAnswers as $rowsAnswer) {
          echo '<input type="radio" name="animal" value="' . shuffle($rowsAnswer['answers']) . '">' . $rowsAnswer['answers'] . '<br>';
 //
