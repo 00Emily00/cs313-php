@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>   
+<head>
+    <title>Learn your Animals</title>
+    <script src="animalsProject.css"></script>
 </head>
 <body>
     <h1>Get to know your animals</h1>
+    
 <?php
 require ('dbConnect.php');
 $db = get_db();
@@ -65,6 +68,8 @@ $rowsAnswers3 = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     
 ?>
+    
+    
 
     
     
