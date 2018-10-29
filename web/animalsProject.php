@@ -23,21 +23,23 @@ $stmt->execute();
 $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);  
 ?> 
     
+
 <?php
-$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 1");
-$stmt->execute();
-$rowsAnswers1 = $stmt->fetchAll(PDO::FETCH_ASSOC);  
+//$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 1");
+//$stmt->execute();
+//$rowsAnswers1 = $stmt->fetchAll(PDO::FETCH_ASSOC);  
 ?>
     <?php
-$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 1");
-$stmt->execute();
-$rowsAnswers2 = $stmt->fetchAll(PDO::FETCH_ASSOC);  
+//$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 1");
+//$stmt->execute();
+//$rowsAnswers2 = $stmt->fetchAll(PDO::FETCH_ASSOC);  
 ?>
 <?php
-$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 1");
-$stmt->execute();
-$rowsAnswers3 = $stmt->fetchAll(PDO::FETCH_ASSOC);  
+//$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 1");
+//$stmt->execute();
+//$rowsAnswers3 = $stmt->fetchAll(PDO::FETCH_ASSOC);  
 ?>  
+
     
 <?php
     foreach($rows as $row)
@@ -66,7 +68,7 @@ $rowsAnswers3 = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ////        echo $rowsAnswer['answers'];
     }
     
-    
+    }
 ?>
     
     
