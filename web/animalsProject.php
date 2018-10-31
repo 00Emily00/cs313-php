@@ -16,29 +16,7 @@ $stmt = $db->prepare("SELECT q.questions, a.answers FROM questions q JOIN questi
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
-    
-<!--
 
--->
-    
-
-<?php
-//$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 1");
-//$stmt->execute();
-//$rowsAnswers1 = $stmt->fetchAll(PDO::FETCH_ASSOC);  
-?>
-    <?php
-//$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 1");
-//$stmt->execute();
-//$rowsAnswers2 = $stmt->fetchAll(PDO::FETCH_ASSOC);  
-?>
-<?php
-//$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 1");
-//$stmt->execute();
-//$rowsAnswers3 = $stmt->fetchAll(PDO::FETCH_ASSOC);  
-?>  
-
-    
 <?php
     foreach($rows as $row)
     { //possible answers
@@ -53,7 +31,7 @@ $stmt = $db->prepare("SELECT answers FROM answers WHERE id!= :answerId ORDER BY 
 $stmt->execute();
 $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);   
       foreach($rowsAnswers as $rowsAnswer) {
-         echo '<input type="radio" name="animal" value="' . shuffle($rowsAnswer['answers']) . '">' . $rowsAnswer['answers'] . '<br>';  
+         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';  
         }
        
     }
