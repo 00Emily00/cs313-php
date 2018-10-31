@@ -48,7 +48,8 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 if (isset($_POST['submit']) {
   if(isset($_POST['radio'])) {
       echo "You got these correct: " . $_POST['radio'];
-  }  
+  }
+}
 }
 ?>
 
