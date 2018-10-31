@@ -8,6 +8,6 @@
 //}
 //}
 
-$radio = $_POST;
+$radio = $_POST['animal'];
 echo $radio;
 ?>
