@@ -37,7 +37,7 @@ $stmt = $db->prepare("SELECT answers, aid FROM answers ORDER BY RANDOM() LIMIT 3
 $stmt->execute();
 $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);   
       foreach($rowsAnswers as $rowsAnswer) {
-         echo '<input type="radio" name="' . $row['qid'] . '" value="' . $rowsAnswer['answerid'] . '">' . $rowsAnswer['answers'] . '<br>';
+         echo '<input type="radio" name="' . $row['questionid'] . '" value="' . $rowsAnswer['answerid'] . '">' . $rowsAnswer['answers'] . '<br>';
         }
         
 //        $answersi = $row["answers"];
