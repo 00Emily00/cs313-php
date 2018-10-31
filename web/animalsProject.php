@@ -20,10 +20,6 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <form action="" method="post">
 <?php
 
-    $r = 0;
-    while($row = $row['answers']) {
-        $r++;
-    }
     $i = 0;
     $animal = "animal"; //made it a string
     foreach($rows as $row)
@@ -49,10 +45,9 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </form>
     
 <?php
-if (isset($_POST['submit']) and ! empty($_POST['submit'])) {
+if (isset($_POST['submit']) {
   if(isset($_POST['radio'])) {
-      $selected_value = $_POST['radio'];
-      echo $selected_value;
+      echo "You got these correct: " . $_POST['radio'];
   }  
 }
 ?>
