@@ -22,7 +22,6 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     { //possib
         echo '<img src="' . $row['questions'] . '" >' . ' ' . '<br>'; //display image once
         
-        for($i = 0; $x < count($rows); $i++) { 
         $row = $rows[$i]; 
         echo '<input type="radio" name="animal"  value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
         
@@ -36,7 +35,6 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //       echo $rowsAnswer['answers'];
     }
     
-    }
     }
 ?>
 
