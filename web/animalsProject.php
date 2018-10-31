@@ -44,7 +44,7 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //    print $answersi;
     }
  
-    }
+    
 
 ?>
 
