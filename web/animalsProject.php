@@ -49,6 +49,7 @@ foreach ($_POST['animal'] as $select)
 {
 echo "You have selected :" .$select; // Displaying Selected Value
 }
+    }
 
 //    if (isset($_POST['submit'])) {
 //        if(isset($_POST['radio'])) {
