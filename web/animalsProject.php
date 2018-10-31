@@ -41,40 +41,34 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
 <?php
     foreach($rows as $row)
-    {
+    { //possible answers
         echo '<img src="' . $row['questions'] . '" >' . ' ' . '<br>'; //display image once
         
         echo '<input type="radio" name="animal" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
         
-    
-$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 3");
+    //select 3 answers as long as it's not a chicken in WHERE id etc :answerid
+        //
+$stmt = $db->prepare("SELECT answers FROM answers WHERE id!= :answerId ORDER BY RANDOM() LIMIT 3");
+
 $stmt->execute();
 $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);   
       foreach($rowsAnswers as $rowsAnswer) {
-         echo '<input type="radio" name="animal" value="' . shuffle($rowsAnswer['answers']) . '">' . $rowsAnswer['answers'] . '<br>';
-//
-//    }foreach($rowsAnswer1 as $rowsAnswer1) {
-//         echo '<input type="radio" name="animal" value="' . $rowsAnswer1['answers'] . '">' . $rowsAnswer1['answers'] . '<br>';
-//
-//    }foreach($rowsAnswers2 as $rowsAnswer2) {
-//         echo '<input type="radio" name="animal" value="' . $rowsAnswer2['answers'] . '">' . $rowsAnswer2['answers'] . '<br>';
-//
-//    }
-//        foreach($rowsAnswers3 as $rowsAnswer3) {
-//         echo '<input type="radio" name="animal" value="' . $rowsAnswer3['answers'] . '">' . $rowsAnswer3['answers'] . '<br>';
-//
-//    }
+         echo '<input type="radio" name="animal" value="' . shuffle($rowsAnswer['answers']) . '">' . $rowsAnswer['answers'] . '<br>';  
+    }
         
-//        foreach($rowsAnswers as $rowsAnswer)
-//         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
-////        echo $rowsAnswer['answers'];
-    }
     
-    }
 ?>
     
+ <form action="#" method="post">
+     <input type="submit" name="submit" value="Get Resuls"/>
     
+</form>   
+<?php
 
+    if(isset($_POST['submit'])) {
+        echo $row;
+    }
+?>
     
     
     
