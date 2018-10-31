@@ -8,10 +8,9 @@ var_dump( $_POST);
 //}
 //}
 
-//loop
-$radio = $_POST[$animal];
-//var_dump($radio);
-echo $radio;
 
-
+foreach($ans as $qid => $answers ) {
+echo $qid;
+print_r($answers);
+}
 ?>
