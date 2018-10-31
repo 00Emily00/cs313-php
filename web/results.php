@@ -1,4 +1,4 @@
 <?php
-echo ( $_POST['answers']);
+echo ( $_POST['animal']);
 
 ?>
