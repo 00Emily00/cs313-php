@@ -24,7 +24,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $animalList = array[];
         echo '<img src="' . $row['questions'] . '" >' . ' ' . '<br>'; //display image once
 //        for($x = 0; $x < $rows['answers']; $x++) { 
-        echo '<input type="radio" name="' . $animalList['answers'] . '"  value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
+        echo '<input type="radio" name="' . $animalList . '"  value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
         
     //select 3 answers as long as it's not a chicken in WHERE id etc :answerid
 $stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 3");
@@ -32,7 +32,7 @@ $stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 3");
 $stmt->execute();
 $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);   
       foreach($rowsAnswers as $rowsAnswer) {
-         echo '<input type="radio" name="' . $animalList['answers'] . '" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
+         echo '<input type="radio" name="'$animalList '" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
 //       echo $rowsAnswer['answers'];
     }
     
