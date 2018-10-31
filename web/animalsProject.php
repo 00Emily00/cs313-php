@@ -16,14 +16,16 @@ $stmt = $db->prepare("SELECT q.questions, a.answers FROM questions q JOIN questi
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
- 
+
 <form action="#" method="post">
 <?php
+    $r = 0;
     foreach($rows as $row)
     { //possib
         echo '<img src="' . $row['questions'] . '" >' . ' ' . '<br>'; //display image once
         
-        echo '<input type="radio" name="animal"  value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
+        for($r = 0; $r < 5; $r++) {
+        echo '<input type="radio" name="'$r'" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
         
     //select 3 answers as long as it's not a chicken in WHERE id etc :answerid
 $stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 3");
@@ -33,8 +35,8 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
       foreach($rowsAnswers as $rowsAnswer) {
          echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
 //       echo $rowsAnswer['answers'];
-      }
-    
+        }
+    }
     }
 ?>
     <input type="submit" name="submit" value="Get Results"/>
