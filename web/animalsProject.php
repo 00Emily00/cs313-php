@@ -16,7 +16,8 @@ $stmt = $db->prepare("SELECT q.questions, a.answers FROM questions q JOIN questi
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
-    
+ 
+<form action="#" method="post">
 <?php
     foreach($rows as $row)
     { //possib
@@ -36,8 +37,6 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     }
 ?>
-
-<form action="#" method="post">
     <input type="submit" name="submit" value="Get Results"/>
 </form>
     
