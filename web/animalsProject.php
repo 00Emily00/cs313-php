@@ -42,6 +42,7 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     
     $answersi = $row["answers"];
+    print $answersi;
 //    if (isset($_POST['submit'])) {
 //        if(isset($_POST['radio'])) {
 //                echo $_POST['radio'];
