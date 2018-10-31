@@ -40,10 +40,15 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
          echo '<input type="radio" name="' . $animal . '" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
         }
         
-        $answersi = $row["answers"];
-    print $answersi;
+//        $answersi = $row["answers"];
+//    print $answersi;
     }
-    
+    if(isset($_POST['submit'])){
+// As output of $_POST['Color'] is an array we have to use foreach Loop to display individual value
+foreach ($_POST['animal'] as $select)
+{
+echo "You have selected :" .$select; // Displaying Selected Value
+}
 
 //    if (isset($_POST['submit'])) {
 //        if(isset($_POST['radio'])) {
