@@ -25,12 +25,12 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $r++;
     }
     $i = 0;
-    $animal = "animal";
+    $animal = "animal"; //made it a string
     foreach($rows as $row)
     { //possib
         $i++;
         echo '<img src="' . $row['questions'] . '" >' . ' ' . '<br>'; //display image once
-        if (i % 4 == 0)
+        if (i % 4 == 0) //
             $animal += '1';
         echo '<input type="radio" name="' . $animal . '" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
         
@@ -51,7 +51,8 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
 <?php
   if(isset($_POST['submit'])) {
-      echo $row['answers'];
+      $selected_value = $_POST[$animal];
+      echo $selected_value;
   }  
 ?>
 
