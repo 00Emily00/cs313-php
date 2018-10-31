@@ -20,7 +20,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php
     foreach($rows as $row)
     { //possib
-        for($x = 0; $x <= $rows['answers']; $x++) {
+        for($x = 0; $x <= 10; $x++) {
         echo '<img src="' . $row['questions'] . '" >' . ' ' . '<br>'; //display image once
         
         echo '<input type="radio" name="' . $x['answers'] . '"  value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
