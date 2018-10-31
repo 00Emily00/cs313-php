@@ -11,6 +11,6 @@
 
 foreach($_POST as $key => $value ) { //get keys and values from post and display them
 var_dump($key);
-var_dump($avalue);
+var_dump($value);
 }
 ?>
