@@ -46,9 +46,6 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
     <input type="submit" name="submit" value="Get Results"/>
 </form>
-    
-
-?>
 
     <!--
 <form action="" method="get">
