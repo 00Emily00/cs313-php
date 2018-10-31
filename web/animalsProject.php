@@ -40,6 +40,8 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
          echo '<input type="radio" name="' . $animal . '" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
         }
     }
+    
+    $answersi = $row["answers"];
 //    if (isset($_POST['submit'])) {
 //        if(isset($_POST['radio'])) {
 //                echo $_POST['radio'];
