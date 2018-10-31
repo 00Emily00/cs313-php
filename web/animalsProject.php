@@ -39,16 +39,14 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
          echo '<input type="radio" name="' . $animal . '" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
         }
     }
+      echo "<input type='submit' name='submit' value='Get Results'/>"
     if (isset($_POST['submit'])) {
         if(isset($_POST['radio'])) {
-            
-    foreach($_POST['radio'] as $select) {
-        echo $select;
-    }
+                echo $_POST['radio'];
         }
     }
     
-//    echo "<input type='submit' name='submit' value='Get Results'/>"
+  
 //    if (isset($_POST['submit'])) {
 //        if(isset($_POST['radio'])) {
 //      echo "You got these correct: " . $_POST['radio'];
