@@ -21,7 +21,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach($rows as $row)
     { //possib
        $i = 1;
-    $animalList = array[];
+    $animalList = array['answers'];
         echo '<img src="' . $row['questions'] . '" >' . ' ' . '<br>'; //display image once
 //        for($x = 0; $x < $rows['answers']; $x++) { 
         echo '<input type="radio" name="' . $animalList . '"  value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
