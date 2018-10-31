@@ -7,8 +7,9 @@
 //echo "You have selected :".$_POST['radio'];  //  Displaying Selected Value
 //}
 //}
-
+print_r($_POST);
+//loop
 $radio = $_POST[$animal];
-var_dump($radio);
+//var_dump($radio);
 echo $radio;
 ?>
