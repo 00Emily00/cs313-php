@@ -22,7 +22,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     { //possib
        
         echo '<img src="' . $row['questions'] . '" >' . ' ' . '<br>'; //display image once
-        for($x = 0; $x < $rows; $x++) { 
+        for($x = 0; $x < $rows['answers']; $x++) { 
         echo '<input type="radio" name="' . $x . '"  value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
         
     //select 3 answers as long as it's not a chicken in WHERE id etc :answerid
