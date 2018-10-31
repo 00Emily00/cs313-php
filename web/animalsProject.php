@@ -12,7 +12,7 @@ require ('dbConnect.php');
 $db = get_db();
 $questions = $_GET['question']; 
 
-$stmt = $db->prepare("SELECT q.questions, a.answers, q.qid, a.aid FROM questions q JOIN questionanswer qa ON q.questionId=qa.qid JOIN answers a ON qa.aid=a.answerId"); //order by rand()
+$stmt = $db->prepare("SELECT q.questions, a.answers, q.questionid, a.answerid FROM questions q JOIN questionanswer qa ON q.questionId=qa.qid JOIN answers a ON qa.aid=a.answerId"); //order by rand()
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -26,9 +26,9 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     { //possib
         $i++;
         echo '<img src="' . $row['questions'] . '" >' . ' ' . '<br>'; //display image once
-        if (i % 4 == 0) //
+        if (i % 4 == 0) 
             $animal += '1';
-        echo '<input type="radio" name="' . $row['qid'] . '" value="' . $row['aid'] . '">' . $row['answers'] . '<br>';
+        echo '<input type="radio" name="' . $row['questionid'] . '" value="' . $row['answerid'] . '">' . $row['answers'] . '<br>';
         
     //select 3 answers as long as it's not a chicken in WHERE id etc :answerid
 //    $stmt = $db->prepare("SELECT answers FROM answers WHERE qid NOT IN(SELECT q.questions, a.answers FROM questions q JOIN questionanswer qa ON q.questionId=qa.qid JOIN answers a ON qa.aid=a.answerId) ORDER BY RANDOM() LIMIT 3");
@@ -37,7 +37,7 @@ $stmt = $db->prepare("SELECT answers, aid FROM answers ORDER BY RANDOM() LIMIT 3
 $stmt->execute();
 $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);   
       foreach($rowsAnswers as $rowsAnswer) {
-         echo '<input type="radio" name="' . $row['qid'] . '" value="' . $rowsAnswer['aid'] . '">' . $rowsAnswer['answers'] . '<br>';
+         echo '<input type="radio" name="' . $row['qid'] . '" value="' . $rowsAnswer['answerid'] . '">' . $rowsAnswer['answers'] . '<br>';
         }
         
 //        $answersi = $row["answers"];
