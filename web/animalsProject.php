@@ -20,16 +20,16 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <form action="#" method="post">
 <?php
 
-//    $r = 0;
-//    while($row = $row['answers']) {
-//        $r++;
-//    }
+    $r = 0;
+    while($row = $row['answers']) {
+        $r++;
+    }
     foreach($rows as $row)
     { //possib
         echo '<img src="' . $row['questions'] . '" >' . ' ' . '<br>'; //display image once
         
         
-        echo '<input type="radio" name="animal" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
+        echo '<input type="radio" name="'$r'" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
         
     //select 3 answers as long as it's not a chicken in WHERE id etc :answerid
 $stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 3");
