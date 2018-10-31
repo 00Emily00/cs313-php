@@ -9,8 +9,8 @@
 //}
 
 
-foreach($ans as $qid => $answers ) {
-echo $qid;
-print_r($answers);
+foreach($_POST as $key => $value ) {
+echo $key;
+print_r($avalue);
 }
 ?>
