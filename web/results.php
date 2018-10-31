@@ -1,4 +1,4 @@
 <?php
-echo ( $_POST['animal']);
+var_dump( $_POST);
 
 ?>
