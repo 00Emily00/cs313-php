@@ -28,7 +28,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $animal = "animal";
     foreach($rows as $row)
     { //possib
-        i++;
+        $i++;
         echo '<img src="' . $row['questions'] . '" >' . ' ' . '<br>'; //display image once
         if (i % 4 == 0)
             $animal += '1';
