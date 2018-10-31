@@ -26,27 +26,26 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo '<input type="radio" name="animal"  value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
         
     //select 3 answers as long as it's not a chicken in WHERE id etc :answerid
-$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 3");
+
+    
+    }
+    $stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 3");
 //id!= :answerId 
 $stmt->execute();
 $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);   
       foreach($rowsAnswers as $rowsAnswer) {
          echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
 //       echo $rowsAnswer['answers'];
-    }
-    
-    }
+      }
 ?>
     <input type="submit" name="submit" value="Get Results"/>
+</form>
     
-    <?php
+<?php
   if(isset($_POST['submit'])) {
       echo $row['answers'];
   }  
 ?>
-</form>
-    
-
     
 
     
