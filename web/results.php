@@ -2,9 +2,9 @@
 var_dump( $_POST);
 
 if (isset($_POST['submit'])) {
-if(isset($_POST['radio']))
+if(isset($_POST))
 {
-echo "You have selected :".$_POST['radio'];  //  Displaying Selected Value
+echo "You have selected :".$_POST;  //  Displaying Selected Value
 }
 }
 ?>
