@@ -10,7 +10,7 @@
 
 
 foreach($_POST as $key => $value ) { //get keys and values from post and display them
-pring_r($key);
+print_r($key);
 print_r($avalue);
 }
 ?>
