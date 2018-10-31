@@ -60,10 +60,12 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
 ?>
     
+<!--
  <form action="#" method="post">
      <input type="submit" name="submit" value="Get Resuls"/>
     
 </form>   
+-->
 
 <?php
 //
