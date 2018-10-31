@@ -66,7 +66,7 @@ echo "You have selected :" .$select; // Displaying Selected Value
 //}
 ?>
 
-    <input type="submit" name="submit" value="Get Results"/>
+    <input type="submit" value="Get Results"/>
 </form>
 
     <!--
