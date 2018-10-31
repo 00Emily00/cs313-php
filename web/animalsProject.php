@@ -38,13 +38,15 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 ?>
     <input type="submit" name="submit" value="Get Results"/>
-</form>
     
-<?php
+    <?php
   if(isset($_POST['submit'])) {
       echo $row['answers'];
   }  
 ?>
+</form>
+    
+
     
 
     
