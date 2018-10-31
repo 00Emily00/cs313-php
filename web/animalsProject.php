@@ -41,7 +41,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
 <?php
     foreach($rows as $row)
-    { //possible answers
+    { //possib
         echo '<img src="' . $row['questions'] . '" >' . ' ' . '<br>'; //display image once
         
         echo '<input type="radio" name="animal" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
@@ -53,7 +53,7 @@ $stmt = $db->prepare("SELECT answers FROM answers WHERE id!= :answerId ORDER BY 
 $stmt->execute();
 $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);   
       foreach($rowsAnswers as $rowsAnswer) {
-         echo '<input type="radio" name="animal" value="' . shuffle($rowsAnswer['answers']) . '">' . $rowsAnswer['answers'] . '<br>';
+         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
 //
 //    }foreach($rowsAnswer1 as $rowsAnswer1) {
 //         echo '<input type="radio" name="animal" value="' . $rowsAnswer1['answers'] . '">' . $rowsAnswer1['answers'] . '<br>';
