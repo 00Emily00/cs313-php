@@ -64,12 +64,14 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
      <input type="submit" name="submit" value="Get Resuls"/>
     
 </form>   
-<?php
 
-    if(isset($_POST['submit'])) {
-        echo $row;
-    }
+<?php
+//
+//    if(isset($_POST['submit'])) {
+//        echo $row;
+//    }
 ?>
+
 
     <!--
 <form action="" method="get">
