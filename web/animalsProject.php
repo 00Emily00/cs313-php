@@ -50,7 +50,7 @@ if (isset($_POST['submit']) {
       echo "You got these correct: " . $_POST['radio'];
   }
 }
-}
+
 ?>
 
     <!--
