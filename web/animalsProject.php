@@ -50,8 +50,8 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </form>
     
 <?php
-  if(isset($_POST['submit'])) {
-      $selected_value = $_POST[$animal];
+  if(isset($_POST['radio'])) {
+      $selected_value = $_POST['radio'];
       echo $selected_value;
   }  
 ?>
