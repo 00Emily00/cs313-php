@@ -16,7 +16,29 @@ $stmt = $db->prepare("SELECT q.questions, a.answers FROM questions q JOIN questi
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
+    
+<!--
 
+-->
+    
+
+<?php
+//$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 1");
+//$stmt->execute();
+//$rowsAnswers1 = $stmt->fetchAll(PDO::FETCH_ASSOC);  
+?>
+    <?php
+//$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 1");
+//$stmt->execute();
+//$rowsAnswers2 = $stmt->fetchAll(PDO::FETCH_ASSOC);  
+?>
+<?php
+//$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 1");
+//$stmt->execute();
+//$rowsAnswers3 = $stmt->fetchAll(PDO::FETCH_ASSOC);  
+?>  
+
+    
 <?php
     foreach($rows as $row)
     { //possible answers
@@ -31,27 +53,76 @@ $stmt = $db->prepare("SELECT answers FROM answers WHERE id!= :answerId ORDER BY 
 $stmt->execute();
 $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);   
       foreach($rowsAnswers as $rowsAnswer) {
-         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';  
-        }
-       
+         echo '<input type="radio" name="animal" value="' . shuffle($rowsAnswer['answers']) . '">' . $rowsAnswer['answers'] . '<br>';
+//
+//    }foreach($rowsAnswer1 as $rowsAnswer1) {
+//         echo '<input type="radio" name="animal" value="' . $rowsAnswer1['answers'] . '">' . $rowsAnswer1['answers'] . '<br>';
+//
+//    }foreach($rowsAnswers2 as $rowsAnswer2) {
+//         echo '<input type="radio" name="animal" value="' . $rowsAnswer2['answers'] . '">' . $rowsAnswer2['answers'] . '<br>';
+//
+//    }
+//        foreach($rowsAnswers3 as $rowsAnswer3) {
+//         echo '<input type="radio" name="animal" value="' . $rowsAnswer3['answers'] . '">' . $rowsAnswer3['answers'] . '<br>';
+//
+//    }
+        
+//        foreach($rowsAnswers as $rowsAnswer)
+//         echo '<input type="radio" name="animal" value="' . $rowsAnswer['answers'] . '">' . $rowsAnswer['answers'] . '<br>';
+////        echo $rowsAnswer['answers'];
     }
     
+    }
 ?>
     
-<!--
- <form action="#" method="post">
-     <input type="submit" name="submit" value="Get Resuls"/>
     
-</form>   
--->
 
-<?php
+    
+    
+    
+    
+    
+    
+    <!--
+
+//$stmt = $db->prepare("SELECT * FROM questions q INNER JOIN questionanswer qa ON q.questionid = qa.qid WHERE questionid=1");
+//////////
+//foreach ($rows as $row)
+//{
+//    $question_id = $row['id'];
+//    
+//    echo '<img src="' . $row['questions'] . '"><br>';
+//    
 //
-//    if(isset($_POST['submit'])) {
-//        echo $row;
+//$stmt = $db->prepare("SELECT answers FROM answers a INNER JOIN questionanswer qa ON a.answerid = qa.aid WHERE answerid=1");
+//$stmt->execute();
+//$rowsA = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//    
+//    foreach($rowsA as $correct_answer)
+//    {
+//        
+//        echo $correct_answer['answers'] . '<br>';
 //    }
-?>
+    
+//    echo $row['aid'];
+//////////////
 
+ //////  
+//$stmt = $db->prepare("SELECT q.questions, a.answers FROM questions q JOIN questionanswer qa ON q.questionId=qa.qid JOIN answers a ON qa.aid=a.answerId");
+//$stmt->execute();
+//$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+/////
+-->
+<!--
+   
+//    foreach ($rows as $row)
+//  foreach ($db->query('SELECT questions FROM questions WHERE $question=:question'))
+//{
+//      echo '<p><b>' . ['question'] . ' ';
+//}  
+//                
+?>
+-->
 
     <!--
 <form action="" method="get">
