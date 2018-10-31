@@ -22,7 +22,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     { //possib
         echo '<img src="' . $row['questions'] . '" >' . ' ' . '<br>'; //display image once
         
-        echo '<input type="radio" name="' . $row['answers'] . '" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
+        echo '<input type="radio" name="' . $row . '" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
         
     //select 3 answers as long as it's not a chicken in WHERE id etc :answerid
 $stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 3");
