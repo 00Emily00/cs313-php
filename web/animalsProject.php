@@ -31,7 +31,8 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo '<input type="radio" name="' . $animal . '" value="' . $row['answers'] . '">' . $row['answers'] . '<br>';
         
     //select 3 answers as long as it's not a chicken in WHERE id etc :answerid
-$stmt = $db->prepare("SELECT answers FROM answers WHERE qid NOT IN(SELECT q.questions, a.answers FROM questions q JOIN questionanswer qa ON q.questionId=qa.qid JOIN answers a ON qa.aid=a.answerId) ORDER BY RANDOM() LIMIT 3");
+//    $stmt = $db->prepare("SELECT answers FROM answers WHERE qid NOT IN(SELECT q.questions, a.answers FROM questions q JOIN questionanswer qa ON q.questionId=qa.qid JOIN answers a ON qa.aid=a.answerId) ORDER BY RANDOM() LIMIT 3");
+$stmt = $db->prepare("SELECT answers FROM answers ORDER BY RANDOM() LIMIT 3");
 //id!= :answerId 
 $stmt->execute();
 $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);   
