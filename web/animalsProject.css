@@ -1,6 +1,6 @@
 html {
 /*      background-color: aliceblue;*/
-    border-image: url(animalbackground2%20copy.jpg);
+    border-image: url(animalbackground2%20copy.jpg) 30 round;
 }
 body {
 /*
