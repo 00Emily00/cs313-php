@@ -43,6 +43,8 @@ if (isset($_POST['username']) && isset($_POST['password']))
 <html>
 <head>
     <title>Learn Your Animals</title>
+    <link rel="stylesheet" href="animalsProject.css">
+
 </head>
 <body>
 

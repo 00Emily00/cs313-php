@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Learn Your Animals</title>
+    <link rel="stylesheet" href="animalsProject.css">
+
 </head>
 <body>
     <h1>Hello and Welcome!</h1>

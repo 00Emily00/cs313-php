@@ -1,6 +1,6 @@
 <?php
 $username = $_POST['username'];
-$username = htmlspecialchars($username);
+$username = htmlspecialchars($username); //this takes care of html chars. ie. < converts it to &it; this doesn't take care of sql commands and vice versa
 $password = $_POST['password'];
 $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
