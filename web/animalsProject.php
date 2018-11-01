@@ -16,7 +16,7 @@ $stmt = $db->prepare("SELECT q.questions, a.answers, q.questionid, a.answerid FR
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
-
+<div id="formStyle">
 <form action="results.php" method="post">
 <?php
 
@@ -50,7 +50,7 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <input type="submit" value="Get Results"/>
 </form>
-
+</div>
         
 </body>
 </html>
