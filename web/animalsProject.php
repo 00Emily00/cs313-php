@@ -16,7 +16,8 @@ $stmt = $db->prepare("SELECT q.questions, a.answers, q.questionid, a.answerid FR
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
-<div id="formStyle">
+
+<div class="formStyle">
 <form action="results.php" method="post">
 <?php
 

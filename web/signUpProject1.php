@@ -10,7 +10,7 @@
     
     <h2>Sign up if you don't already have an account or click log in</h2>
     <div>
-    <form id="form" action="createAccountProject1.php" method="post">
+    <form class="formStyle" action="createAccountProject1.php" method="post">
         
     <label for="username">Username: </label>
     <input type="text" name="username"/>

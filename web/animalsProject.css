@@ -1,5 +1,5 @@
 body {
-    background-color: aliceblue;
+    background-image: url(animalbackground2%20copy.jpg);
     text-align: center;
 }
 h1 {
@@ -8,4 +8,7 @@ h1 {
 }
 form {
     
+}
+.formStyle {
+    background-color: aliceblue;
 }
