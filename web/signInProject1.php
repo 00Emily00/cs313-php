@@ -15,6 +15,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
 	$statement = $db->prepare("SELECT password FROM login WHERE username=:username");
 	$statement->bindValue(':username', $username);
 	$user = $statement->execute();
+    $user = $statement->fetch();
 	if ($user)
 	{
 		$row = $statement->fetch();
@@ -24,7 +25,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
 		{
 			// password was correct, put the user on the session, and redirect to home
 			$_SESSION['username'] = $username;
-			header("Location: animalProject.php");
+			header("Location: animalsProject.php");
 			die(); // we always include a die after redirects.
 		}
 		else
@@ -51,7 +52,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
     <h1>Get to know your animals</h1>
     <h1>Please Sign In: </h1>
     
-    <form class="formStyle" action="animalsProject.php" method="POST">
+    <form class="formStyle" action="signInProject1.php" method="POST">
 
 	<input type="text" id="username" name="username" placeholder="Username">
 	<label for="username">Username</label>
