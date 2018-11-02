@@ -1,5 +1,5 @@
 <?php
-//var_dump( $_POST);
+var_dump( $_POST);
 //
 //if (isset($_POST['submit'])) {
 //if(isset($_POST['radio']))
@@ -10,10 +10,22 @@
 
 //var_dump($_POST) shows an array with keys and values
 //do a foreach
+//pull all rows
+
+//call the questionanswer
+//get user input
+$stmt = $db->prepare("SELECT qId, aId FROM questionanswer");
+//id!= :answerId 
+$stmt->execute();
+$rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);   
+
+
+
+
 
 foreach($_POST as $key => $value ) { //get keys and values from post and display them
-var_dump($key);
-var_dump($value);
+echo $key;
+echo $value;
 }
 
 
