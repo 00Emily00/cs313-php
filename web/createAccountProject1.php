@@ -19,7 +19,7 @@ $db = get_db();
 $stmt = $db->prepare("INSERT INTO login(username,password) VALUES(:username,:password)");
 $stmt->bindValue(':username', $username, PDO::PARAM_STR);
 $stmt->bindValue(':password', $passwordHash, PDO::PARAM_STR);
-$stmt = $db->execute();
+$stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 header("Location: signInProject1.php");
