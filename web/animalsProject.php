@@ -8,6 +8,7 @@
 
 
 <?php
+session_start();
 require ('dbConnect.php');
 $db = get_db();
 $questions = $_GET['question']; 
