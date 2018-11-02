@@ -49,14 +49,12 @@ if (isset($_POST['username']) && isset($_POST['password']))
 <body>
 
     <h1>Get to know your animals</h1>
-    <h2>Please Sign In: </h2>
-<div class="formStyle">
-    <?php
+    <h1>Please Sign In: </h1>
+<?php
   if($badLogin) {
       echo "Incorrect username or password! Please try again<br>";
   }  
 ?>
-    </div>
     <form class="formStyle" action="signInProject1.php" method="POST">
 
 	<input type="text" id="username" name="username" placeholder="Username">
