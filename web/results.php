@@ -1,5 +1,5 @@
 <?php
-var_dump( $_POST);
+//var_dump( $_POST);
 //
 //if (isset($_POST['submit'])) {
 //if(isset($_POST['radio']))
@@ -17,16 +17,19 @@ var_dump( $_POST);
 $stmt = $db->prepare("SELECT qId, aId FROM questionanswer");
 //id!= :answerId 
 $stmt->execute();
-$rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);   
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);   
 
-
-
-
-
-foreach($_POST as $key => $value ) { //get keys and values from post and display them
-echo $key;
-echo $value;
+foreach($rows as $row) {
+    echo $_POST[$row['qid']];
 }
+
+
+
+
+//foreach($_POST as $key => $value ) { //get keys and values from post and display them
+//echo $key;
+//echo $value;
+//}
 
 
 //to check if they got the right answer, compare the one user checked and picture with the aid=qid. If the user answer with the question does not exist in the database, then dont add a point.
