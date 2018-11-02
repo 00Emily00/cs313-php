@@ -8,6 +8,7 @@ if (!isset($username) || $username == ""
 	|| !isset($password) || $password == "")
 {
 	header("Location: signUpProject1.php");
+    echo ("You must fill in username and password");
 	die(); // we always include a die after redirects.
 }
 
