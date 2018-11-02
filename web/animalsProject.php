@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="animalsProject.css">
 </head>
 <body>
-    <h1>Get to know your animals</h1>
     
 <?php
 require ('dbConnect.php');
@@ -18,6 +17,8 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <div class="formStyle">
+        <h1>Get to know your animals</h1>
+
 <form action="results.php" method="post">
 <?php
 
