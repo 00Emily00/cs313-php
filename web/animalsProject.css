@@ -50,3 +50,13 @@ input[type="radio"] {
 label {
     float: left;
 }
+.radioButton * {
+  vertical-align: middle;
+}
+.radioButton input {
+  clear:left;
+}
+.radioButton label { 
+  width:200px;
+  display:inline-block;
+}
