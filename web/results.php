@@ -1,4 +1,6 @@
 <?php
+require ('dbConnect.php');
+$db = get_db();
 //var_dump( $_POST);
 //
 //if (isset($_POST['submit'])) {
