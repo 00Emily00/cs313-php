@@ -47,7 +47,12 @@ input[type="radio"] {
     border: 1px solid #d2d2d2;
     border-radius: 100%;
 }
-
+input {
+     text-align: left;
+    font-size: .5%;
+    display: inline-block;
+}
+/*
 .radioButton * {
   vertical-align: middle;
 }
@@ -59,3 +64,4 @@ input[type="radio"] {
   display:inline-block;
     vertical-align: middle;
 }
+*/
