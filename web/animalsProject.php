@@ -49,7 +49,7 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
-    <input type="submit" value="Get Results"/>
+    <input type="submit" class="submit" value="Get Results"/>
 </form>
 </div>
         
