@@ -40,7 +40,7 @@ h1 {
 input[type="radio"] {
    display: none;
 }
-input[type="radio"] + div {
+input[type="radio"] {
    height: 20px;
    width: 20px;
    display: inline-block;
@@ -49,12 +49,4 @@ input[type="radio"] + div {
    background: #FFF;
    border: 1px solid #d2d2d2;
    border-radius: 100%;
-}
-
-input[type="radio"] + div:hover {
-    border-color: #c2c2c2;
-}
-
-input[type="radio"]:checked + div {
-    background:gray;
 }
