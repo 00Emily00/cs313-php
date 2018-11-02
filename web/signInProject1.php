@@ -51,13 +51,6 @@ if (isset($_POST['username']) && isset($_POST['password']))
 
     <h1>Get to know your animals</h1>
     <h1>Please Sign In: </h1>  
- <div class="formStyle"> 
-<?php
-  if($badLogin) {
-      echo "Incorrect username or password! Please try again<br>";
-  }  
-?>
-    </div>
 
     <form class="formStyle" action="signInProject1.php" method="POST">
 
@@ -77,6 +70,10 @@ if (isset($_POST['username']) && isset($_POST['password']))
 Or <a href="signUpProject1.html">Sign up</a> for a new account.
 </form>
 
-
+<?php
+  if($badLogin) {
+      echo "Incorrect username or password! Please try again<br>";
+  }  
+?>
 </body>
 </html>
