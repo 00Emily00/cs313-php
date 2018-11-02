@@ -22,7 +22,10 @@ $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);   
 
 foreach($rows as $row) {
-    echo $_POST[$row['qid']];
+ 
+    if($_POST[$row['qid']] == $row['aid']) {
+        echo "wohoooooooo";
+    }
 }
 
 
