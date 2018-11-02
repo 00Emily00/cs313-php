@@ -46,6 +46,7 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
         foreach($random as $r) {
             echo $r;
         }
+        $random = array();
 //        $answersi = $row["answers"];
 //    print $answersi;
     }
