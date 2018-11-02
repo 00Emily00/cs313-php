@@ -21,12 +21,16 @@ $stmt = $db->prepare("SELECT qId, aId FROM questionanswer");
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);   
 
+$points = 0;
+
 foreach($rows as $row) {
  
     if($_POST[$row['qid']] == $row['aid']) {
-        echo "wohoooooooo";
+        $points++;
     }
+    
 }
+echo "<h1>CONGRATULATIONS!!! YOU GOT $points Points!"
 
 
 
