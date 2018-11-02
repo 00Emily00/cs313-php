@@ -48,6 +48,11 @@ if (isset($_POST['username']) && isset($_POST['password']))
 </head>
 <body>
 
+<?php
+  if($badLogin) {
+      echo "Incorrect username or password! Please try again<br>";
+  }  
+?>
     <h1>Get to know your animals</h1>
     <h1>Please Sign In: </h1>
     
@@ -61,11 +66,6 @@ if (isset($_POST['username']) && isset($_POST['password']))
 	<label for="password">Password</label>
 	<br /><br />
 
-<?php
-  if($badLogin) {
-      echo "Incorrect username or password! Please try again<br>";
-  }  
-?>
 	<input type="submit" class="submit" value="Sign In" />
 
     <br /><br />
