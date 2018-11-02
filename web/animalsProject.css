@@ -52,9 +52,10 @@ input[type="radio"] {
   vertical-align: middle;
 }
 .radioButton input {
-  clear:left;
+  
 }
 .radioButton label { 
   width:200px;
   display:inline-block;
+    vertical-align: middle;
 }
