@@ -34,7 +34,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo '<input type="radio" name="' . $row['questionid'] . '" value="' . $row['answerid'] . '">' . $row['answers'] . '<br>';
         
 
-$stmt = $db->prepare("SELECT answers, answerid FROM answers WHERE answerid != $row['questionid'] ORDER BY RANDOM() LIMIT 3");
+$stmt = $db->prepare("SELECT answers, answerid FROM answers WHERE answerid != " . $row['questionid'] ." ORDER BY RANDOM() LIMIT 3");
 //id!= :answerId 
 $stmt->execute();
 $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);   
