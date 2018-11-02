@@ -15,7 +15,6 @@ if (isset($_POST['username']) && isset($_POST['password']))
 	$statement = $db->prepare("SELECT password FROM login WHERE username=:username");
 	$statement->bindValue(':username', $username);
 	$user = $statement->execute();
-    $user = $statement->fetch();
 	if ($user)
 	{
 		$row = $statement->fetch();
@@ -71,6 +70,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
     <br /><br />
 
 Or <a href="signUpProject1.php">Sign up</a> for a new account.
+        
 </form>
 
 
