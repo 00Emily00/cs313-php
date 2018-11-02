@@ -23,3 +23,9 @@ img {
     width: 100%;
     margin: auto
 }
+#submit {
+    border: double;
+    color: royalblue;
+    font-size: 1.5em;
+    margin-top: .5em;
+}
