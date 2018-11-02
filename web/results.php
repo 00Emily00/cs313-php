@@ -22,7 +22,7 @@ $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);   
 
 foreach($rows as $row) {
-    echo $_POST[''.$row['qid'].''];
+    echo $_POST[$row['qid']];
 }
 
 
