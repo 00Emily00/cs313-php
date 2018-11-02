@@ -47,9 +47,7 @@ input[type="radio"] {
     border: 1px solid #d2d2d2;
     border-radius: 100%;
 }
-label {
-    float: left;
-}
+
 .radioButton * {
   vertical-align: middle;
 }
