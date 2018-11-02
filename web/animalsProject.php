@@ -16,8 +16,9 @@ $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
+<h1>Get to know your animals</h1>
+    
 <div class="formStyle">
-        <h1>Get to know your animals</h1>
 
 <form action="results.php" method="post">
 <?php
