@@ -31,7 +31,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo '<img src="' . $row['questions'] . '" >' . ' ' . '<br>'; //display image once
         if (i % 4 == 0) 
             $animal += '1';
-        echo '<input type="radio" name="' . $row['questionid'] . '" value="' . $row['answerid'] . '">' . $row['answers'] . '<br>';
+        echo '<label><input type="radio" name="' . $row['questionid'] . '" value="' . $row['answerid'] . '"></label>' . $row['answers'] . '<br>';
         
     //select 3 answers as long as it's not a chicken in WHERE id etc :answerid
 //    $stmt = $db->prepare("SELECT answers FROM answers WHERE qid NOT IN(SELECT q.questions, a.answers FROM questions q JOIN questionanswer qa ON q.questionId=qa.qid JOIN answers a ON qa.aid=a.answerId) ORDER BY RANDOM() LIMIT 3");
@@ -40,7 +40,7 @@ $stmt = $db->prepare("SELECT answers, answerid FROM answers ORDER BY RANDOM() LI
 $stmt->execute();
 $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);   
       foreach($rowsAnswers as $rowsAnswer) {
-         echo '<input type="radio" name="' . $row['questionid'] . '" value="' . $rowsAnswer['answerid'] . '">' . $rowsAnswer['answers'] . '<br>';
+         echo '<label><input type="radio" name="' . $row['questionid'] . '" value="' . $rowsAnswer['answerid'] . '"></label>' . $rowsAnswer['answers'] . '<br>';
         }
         
 //        $answersi = $row["answers"];

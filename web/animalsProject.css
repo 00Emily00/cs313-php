@@ -38,14 +38,15 @@ h1 {
     
 }
 input[type="radio"] {
-    display: none;
     height: 20px;
     width: 20px;
-    display: inline-block;
+    display: block;
     cursor: pointer;
     vertical-align: middle;
     background: #FFF;
     border: 1px solid #d2d2d2;
     border-radius: 100%;
-    vertical-align: middle;
+}
+label {
+    float: left;
 }
