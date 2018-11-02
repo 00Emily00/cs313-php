@@ -56,7 +56,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
     <h1>Get to know your animals</h1>
     <h1>Please Sign In: </h1>
     
-    <form class="formStyle" action="signInProject1.php" method="POST">
+    <form class="formStyle" action="animalProject.php" method="POST">
 
 	<input type="text" id="username" name="username" placeholder="Username">
 	<label for="username">Username</label>
@@ -70,7 +70,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
 
     <br /><br />
 
-Or <a href="signUpProject1.html">Sign up</a> for a new account.
+Or <a href="signUpProject1.php">Sign up</a> for a new account.
 </form>
 
 
