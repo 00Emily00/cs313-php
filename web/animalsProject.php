@@ -18,6 +18,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <h1>Get to know your animals</h1>
+<h2> Welcome Back <?php echo $_SESSION['username']; ?></h2>
     
 <div class="formStyle">
 
