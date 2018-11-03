@@ -58,7 +58,7 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     <br/><br/>
     
-    <a href="signUpProject1.php">Click Here</a> to go back to sign in page.
+    <a href="signInProject1.php">Click Here</a> to go back to sign in page.
 
 </form>
 </div>
