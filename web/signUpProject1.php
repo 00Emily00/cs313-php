@@ -17,7 +17,7 @@
     <label for="password">Password: </label>
     <input type="text" name="password"/>
         
-    <input type="submit" class="sumbit" value="Sign Up">
+    <input type="submit" value="Sign Up">
         
     Or <a href="signUpProject1.php">Click Here</a> to go back to sign in page.
     </form>

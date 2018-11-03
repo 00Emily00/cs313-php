@@ -16,7 +16,7 @@ foreach($rows as $row) {
     }
     
 }
-echo "<h1>CONGRATULATIONS!!! YOU GOT $points Points!"
+echo "<h1>CONGRATULATIONS!!! YOU GOT $points Points!</h1>"
 
 
 ?>
@@ -28,11 +28,9 @@ echo "<h1>CONGRATULATIONS!!! YOU GOT $points Points!"
 
 </head>
 <body>
-    <form class="formStyle" action="animalsProject.php" method="post">
-<!--    <h2>Click below to try again!</h2>-->
-  
+    <form class="formStyle" action="animalsProject.php" method="post">  
         
-    <input type="submit" class="submit" value="Play again">
+    <input type="submit" class="playAgain" value="Play again">
     </form>
 </body>
 </html>

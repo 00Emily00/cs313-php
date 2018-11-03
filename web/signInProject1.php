@@ -53,12 +53,12 @@ if (isset($_POST['username']) && isset($_POST['password']))
     
     <form class="formStyle" action="signInProject1.php" method="POST">
 
+    <label for="username">Username: </label>
 	<input type="text" id="username" name="username" placeholder="Username">
-	<label for="username">Username</label>
 	<br /><br />
-
+        
+    <label for="password">Password: </label>
 	<input type="password" id="password" name="password" placeholder="Password">
-	<label for="password">Password</label>
 	<br /><br />
 <?php
   if($badLogin) {

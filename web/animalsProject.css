@@ -41,4 +41,9 @@ h1 {
 input {
     display: inline-block;
 }
-
+.playAgain {
+     border: double;
+    color: royalblue;
+    font-size: 3.5em;
+    margin-top: .5em;
+}
