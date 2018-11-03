@@ -20,13 +20,12 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <h1>Get to know your animals</h1>
 <h2> Welcome Back <?php echo $_SESSION['username']; ?></h2>
-    
+
 <div class="formStyle">
 
 <form action="results.php" method="post">
 <?php
-$random = array();
-   //made it a string
+$random = array(); //put all the radio buttons into an array and then shuffle the answers
     foreach($rows as $row)
     { 
         
@@ -49,8 +48,6 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
             echo $r;
         }
         $random = array();
-//        $answersi = $row["answers"];
-//    print $answersi;
     }
  
     
@@ -58,6 +55,11 @@ $rowsAnswers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
     <input type="submit" class="submit" value="Get Results"/>
+    
+    <br/><br/>
+    
+    <a href="signUpProject1.php">Click Here</a> to go back to sign in page.
+
 </form>
 </div>
         
