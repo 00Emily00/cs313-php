@@ -19,6 +19,8 @@
         
     <input type="submit" value="Sign Up">
         
+    <br/><br/>
+        
     Or <a href="signUpProject1.php">Click Here</a> to go back to sign in page.
     </form>
     </div>
