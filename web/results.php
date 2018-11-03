@@ -32,7 +32,7 @@ echo "<h1>CONGRATULATIONS!!! YOU GOT $points Points!"
 <!--    <h2>Click below to try again!</h2>-->
   
         
-    <input type="submit" class="sumbit" value="Play again">
+    <input type="submit" class="submit" value="Play again">
     </form>
 </body>
 </html>
