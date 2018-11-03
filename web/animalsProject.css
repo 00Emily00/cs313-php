@@ -22,7 +22,7 @@ img {
     font-size: 3.5em;
     margin-top: .5em;
 }
-h1 {
+h1, h2 {
     background-color: aliceblue;
      width: 56%;
     padding: 2%;
