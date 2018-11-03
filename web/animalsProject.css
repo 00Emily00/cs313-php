@@ -4,13 +4,6 @@ body {
 
     text-align: center;
 }
-h1, h2 {
-    font-size: 1.5em;
-    font-family: fantasy;
-}
-form {
-    
-}
 .formStyle {
 
     background-color: aliceblue;
@@ -35,6 +28,7 @@ h1 {
     padding: 2%;
     margin: auto;
     font-size: 3.5em;
+    font-family: fantasy;
     
 }
 
