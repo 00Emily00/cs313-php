@@ -16,7 +16,7 @@ foreach($rows as $row) {
     }
     
 }
-echo "<h1>CONGRATULATIONS!!! YOU GOT $points Points!</h1>"
+echo "<h1>CONGRATULATIONS!!! YOU GOT $points Point(s)!</h1>"
 
 
 ?>
