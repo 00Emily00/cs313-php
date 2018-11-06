@@ -21,7 +21,7 @@
         
     <br/><br/>
         
-    Or <a href="signUpProject1.php">Click Here</a> to go back to sign in page.
+    Or <a href="signInProject1.php">Click Here</a> to go back to sign in page.
     </form>
     </div>
 </body>

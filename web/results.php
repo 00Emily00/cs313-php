@@ -31,6 +31,10 @@ echo "<h1>CONGRATULATIONS!!! YOU GOT $points Point(s)!</h1>"
     <form class="formStyle" action="animalsProject.php" method="post">  
         
     <input type="submit" class="playAgain" value="Play again">
+    
+    <br/><br/>
+        
+    Or <a href="signInProject1.php">Click Here</a> to go back to sign in page.
     </form>
 </body>
 </html>

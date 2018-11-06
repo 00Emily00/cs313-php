@@ -67,7 +67,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
 ?>
 	<input type="submit" class="submit" value="Sign In" />
 
-    <br /><br />
+    <br/><br/>
 
 Or <a href="signUpProject1.php">Sign up</a> for a new account.
         
